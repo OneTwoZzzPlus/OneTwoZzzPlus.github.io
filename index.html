@@ -5,8 +5,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="yandex-verification" content="c7a7810ddaa7d1f5" />
     <title>OneTwoZzzPlus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    Hi!
+
+<a href="ru.html" class="lang-switch" style="display: none;">RU</a>
+
+<div class="container">
+    <header>
+        <h1>OneTwoZzzPlus</h1>
+    </header>
+
+    <section id="bento-nav" class="bento-grid">
+        <div class="bento-tile" data-url="https://onetwozzzplus.github.io/reviews/">
+            <div class="tile-icon">⭐</div>
+            <h3>Reviews</h3>
+            <div class="tile-btns">
+                <button class="bento-btn" data-url="https://github.com/OneTwoZzzPlus/reviews/releases">Extension</button>
+                <button class="bento-btn" data-target="#proj-reviews">Details</button>
+            </div>
+        </div>
+
+        <div class="bento-tile" data-url="https://github.com/OneTwoZzzPlus/ITMO.STUDY/">
+            <div class="tile-icon">📚</div>
+            <h3>ITMO.STUDY</h3>
+            <div class="tile-btns">
+                <button class="bento-btn" data-url="https://github.com/OneTwoZzzPlus/ITMO.STUDY/blob/main/physics.md">Physics Labs</button>
+                <button class="bento-btn" data-target="#proj-itmo">Details</button>
+            </div>
+        </div>
+
+        <div class="bento-tile" data-url="#projects">
+            <div class="tile-icon">📁</div>
+            <h3>Other Projects</h3>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I live in Saint-Petersburg, Russia. I study at 'Programming in Information and Communication Systems' program at ITMO University. I enjoy playing the guitar, Minecraft, and spending time with girls.</p>
+
+        <div class="social-links">
+            <a href="https://github.com/OneTwoZzzPlus/" class="social-btn">GitHub</a>
+            <a href="https://t.me/ivansakulin" class="social-btn">Telegram</a>
+            <a href="https://vk.com/ivansakulin" class="social-btn">VK</a>
+            <a href="https://www.youtube.com/@onetwozzzplus" class="social-btn">YouTube</a>
+            <a href="mailto:ivansakulin5505@gmail.com" class="social-btn">Email</a>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project-category">
+            <h3>Active</h3>
+
+            <article class="project-card" id="proj-itmo">
+                <h4>ITMO.STUDY</h4>
+                <div class="project-links">
+                    <a href="https://github.com/OneTwoZzzPlus/ITMO.STUDY/">Repository</a> with all the labs and other works during my studies at the university.
+                </div>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <span class="tech-tag">Physics Labs</span>
+                        <div class="tech-desc">
+                            An <a href="https://github.com/OneTwoZzzPlus/ITMO.STUDY/blob/main/physics.md">aggregated table</a> with links to reports on laboratory work in physics.
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-tag">LaTeX GOST 7.32</span>
+                        <div class="tech-desc">
+                            The template (in <a href="https://ru.overleaf.com/read/wpxwxgqdcxjd#39c229">overleaf</a>) of the GOST 7.32 report in LaTeX.
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card" id="proj-reviews">
+                <h4>Reviews</h4>
+                <div class="project-links">
+                    A <a href="https://onetwozzzplus.github.io/reviews/">website</a> and <a href="https://github.com/OneTwoZzzPlus/reviews/releases">browser extension</a> with a search for teacher reviews <br/> There are <a href="https://github.com/OneTwoZzzPlus/reviews">frontend, extension</a> and <a href="https://github.com/OneTwoZzzPlus/reviews-backend">backend</a> repositories.
+                </div>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <span class="tech-tag">SPA (HTML + CSS + Vanilla JS)</span>
+                        <div class="tech-desc">Single Page Application architecture built with Vanilla JS for dynamic user experience.</div>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-tag">Python + FastAPI + Postgres</span>
+                        <div class="tech-desc">High-performance Python backend framework used for building the core RESTful API.</div>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-tag">VPS + GitHub Pages</span>
+                        <div class="tech-desc">Backend deployed on a VPS, frontend deployed on a GitHub Pages.</div>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-tag">CI/CD (GitHub Actions)</span>
+                        <div class="tech-desc">Automated backend deployment pipelines to streamline updates.</div>
+                    </div>
+
+                </div>
+            </article>
+        </div>
+
+        <div class="project-category" id="proj-completed">
+            <h3>Completed</h3>
+
+            <article class="project-card">
+                <h4>Chicken Coop Controller</h4>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <span class="tech-tag">Arduino</span>
+                        <div class="tech-desc"></div>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-tag">Kotlin</span>
+                        <div class="tech-desc"></div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <h4>Novella (February Revolution)</h4>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <span class="tech-tag">Unity</span>
+                        <div class="tech-desc"></div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <h4>RZD Mobile App</h4>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <span class="tech-tag">Unity</span>
+                        <div class="tech-desc"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2026 OneTwoZzzPlus. <a href="#">GitHub Profile</a></p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
