@@ -25,7 +25,7 @@ body {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 856px;
     margin: 0 auto;
     padding: 2rem 1.5rem;
 }
@@ -72,7 +72,7 @@ a:hover {
 /* --- Section 1: Bento Grid --- */
 .bento-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 1.5rem;
     margin-bottom: 1.5rem;
 }
@@ -124,7 +124,8 @@ a:hover {
 
 .bento-tile p {
     color: var(--text-secondary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
     flex-grow: 1;
 }
 
@@ -133,18 +134,21 @@ a:hover {
     padding: 0.5rem 1rem;
     white-space: nowrap;
     z-index: 2;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 1);
     border: none;
     border-radius: 20px;
     font-family: inherit;
     font-weight: 600;
+    font-size: 0.875rem;
     cursor: default;
     transition: var(--transition);
     color: var(--text-primary);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 }
 
 .bento-btn:hover {
-    background: rgba(255, 255, 255, 1);
+    background: var(--accent-gradient-hover);
+    text-decoration: none;
 }
 
 /* --- Section 2: About Me --- */
@@ -160,10 +164,11 @@ a:hover {
 }
 
 .social-btn {
-    background: var(--accent-gradient);
+    background: rgba(255, 255, 255, 1);
     padding: 0.5rem 1.25rem;
     border-radius: 20px;
     font-weight: 600;
+    font-size: 0.875rem;
     color: var(--text-primary);
     box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 }
@@ -238,7 +243,7 @@ footer {
 }
 
 /* --- Responsive Layout --- */
-@media (max-width: 600px) {
+@media (max-width: 620px) {
     .bento-grid {
         grid-template-columns: 1fr; /* Stacks to single column */
     }

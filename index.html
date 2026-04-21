@@ -16,7 +16,7 @@
 
 <div class="container">
     <header>
-        <h1>Профиль OneTwoZzzPlus</h1>
+        <h2>OneTwoZzzPlus</h2>
     </header>
 
     <section id="bento-nav" class="bento-grid">
@@ -26,19 +26,19 @@
                 <h3>Reviews</h3>
             </div>
             <div class="tile-btns">
-                <button class="bento-btn" data-url="https://github.com/OneTwoZzzPlus/reviews/releases">Расширение</button>
-                <button class="bento-btn" data-target="#proj-reviews">Что это?</button>
+                <a class="bento-btn" href="https://onetwozzzplus.github.io/reviews/">Сайт</a>
+                <a class="bento-btn" data-target="#proj-reviews">Что это?</a>
             </div>
         </div>
 
-        <div class="bento-tile" data-url="https://github.com/OneTwoZzzPlus/ITMO.STUDY/">
+        <div class="bento-tile" data-url="https://github.com/OneTwoZzzPlus/ITMO.STUDY/#материалы-и-лабораторные-работы-икс-итмо">
             <div class="tile-icon">
                 <img src="bookshelf.ico" alt="" width="32px" height="32px">
                 <h3>ITMO.STUDY</h3>
             </div>
             <div class="tile-btns">
-                <button class="bento-btn" data-url="https://github.com/OneTwoZzzPlus/ITMO.STUDY/blob/main/physics.md">Лабы</button>
-                <button class="bento-btn" data-target="#proj-itmo">Что это?</button>
+                <a class="bento-btn" href="https://github.com/OneTwoZzzPlus/ITMO.STUDY/#материалы-и-лабораторные-работы-икс-итмо">GitHub</a>
+                <a class="bento-btn" data-target="#proj-itmo">Что это?</a>
             </div>
         </div>
 
@@ -51,73 +51,108 @@
                 Я учусь на направлении "Программирование в инфокоммуникационных системах" в Университете ИТМО.
                 Мне нравится играть на гитаре, играть в Майнкрафт и тусить с девчонками.
             </p>
-            <div class="social-links">
-                <a href="https://github.com/OneTwoZzzPlus/" class="social-btn">GitHub</a>
-                <a href="https://t.me/ivansakulin" class="social-btn">Telegram</a>
-                <a href="https://vk.com/ivansakulin" class="social-btn">VK</a>
-                <a href="https://www.youtube.com/@onetwozzzplus" class="social-btn">YouTube</a>
-                <a href="mailto:ivansakulin5505@gmail.com" class="social-btn">Email</a>
+            <div class="tile-btns">
+                <a class="bento-btn" href="https://github.com/OneTwoZzzPlus/">GitHub</a>
+                <a class="bento-btn" href="https://t.me/ivansakulin">Telegram</a>
+                <a class="bento-btn" href="https://vk.com/ivansakulin">VK</a>
+                <a class="bento-btn" href="https://www.youtube.com/@onetwozzzplus">YouTube</a>
+                <a class="bento-btn" href="mailto:ivansakulin5505@gmail.com">Email</a>
             </div>
         </div>
     </section>
 
     <section id="projects">
-        <h2><img src="folder.ico" alt="📁" width="32px" height="32px"> Проекты</h2>
+        <h2>Проекты</h2>
 
         <div class="project-category">
             <h3>Активные</h3>
 
+            <article class="project-card" id="proj-reviews">
+                <h4>Reviews</h4>
+                <div class="project-links">
+                    <a href="https://onetwozzzplus.github.io/reviews/">Веб-сайт</a>
+                    и <a href="https://github.com/OneTwoZzzPlus/reviews/releases">расширение (chromium)</a>
+                    с возможностью поиска отзывов на преподавателей.
+                    Есть <a href="https://github.com/OneTwoZzzPlus/reviews">frontend</a>
+                    и <a href="https://github.com/OneTwoZzzPlus/reviews-backend">backend</a> репозитории.
+                </div>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <span class="tech-tag">Vanilla JS + HTML + CSS</span>
+                        <div class="tech-desc">
+                            SPA архитектура с хэш-маршрутизацией на Vanilla JS.
+                            Никаких фреймворков: самописные routing, state, render,
+                            скрипты сборки и автоматического релиза расширения (esbuild и gh).
+                            Развёртывание на GitHub Pages.
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-tag">Python + FastAPI + Postgres (SQL)</span>
+                        <div class="tech-desc">
+                            RESTful API на Python FastAPI, манипуляции с БД посредством SQL.
+                            Стандартный CRUD и умный поиск через rapidfuze.
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-tag">Docker Compose + Nginx</span>
+                        <div class="tech-desc">
+                            Обратный прокси сервер nginx для безопасности, сертификаты Let's Encrypt.
+                            Compose для описания stateful сервисов и экземляра backend.
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-tag">CI/CD (GitHub Actions)</span>
+                        <div class="tech-desc">Автоматическая сборка и развёртывание backend сервиса на VPS.</div>
+                    </div>
+                </div>
+            </article>
+
             <article class="project-card" id="proj-itmo">
                 <h4>ITMO.STUDY</h4>
                 <div class="project-links">
-                    <a href="https://github.com/OneTwoZzzPlus/ITMO.STUDY/">Repository</a> with all the labs and other works during my studies at the university.
+                    <a href="https://github.com/OneTwoZzzPlus/ITMO.STUDY/">Хранилище</a>
+                    со всеми работами, выполненными во время учебы в университете.
                 </div>
                 <div class="tech-stack">
                     <div class="tech-item">
                         <span class="tech-tag">Physics Labs</span>
                         <div class="tech-desc">
-                            An <a href="https://github.com/OneTwoZzzPlus/ITMO.STUDY/blob/main/physics.md">aggregated table</a> with links to reports on laboratory work in physics.
+                            <a href="https://github.com/OneTwoZzzPlus/ITMO.STUDY/blob/main/physics.md">Агрегированная таблица</a>
+                            со ссылками на лабораторные работы по физике.
                         </div>
                     </div>
                     <div class="tech-item">
-                        <span class="tech-tag">LaTeX GOST 7.32</span>
+                        <span class="tech-tag">LaTeX ГОСТ 7.32</span>
                         <div class="tech-desc">
-                            The template (in <a href="https://ru.overleaf.com/read/wpxwxgqdcxjd#39c229">overleaf</a>) of the GOST 7.32 report in LaTeX.
+                            Шаблон (в <a href="https://ru.overleaf.com/read/wpxwxgqdcxjd#39c229">overleaf</a>)
+                            ГОСТ 7.32 отчётов в LaTeX.
                         </div>
                     </div>
                 </div>
             </article>
 
-            <article class="project-card" id="proj-reviews">
-                <h4>Reviews</h4>
-                <div class="project-links">
-                    A <a href="https://onetwozzzplus.github.io/reviews/">website</a> and <a href="https://github.com/OneTwoZzzPlus/reviews/releases">browser extension</a> with a search for teacher reviews.<br/>
-                    There are <a href="https://github.com/OneTwoZzzPlus/reviews">frontend, extension</a> and <a href="https://github.com/OneTwoZzzPlus/reviews-backend">backend</a> repositories.
-                </div>
-                <div class="tech-stack">
-                    <div class="tech-item">
-                        <span class="tech-tag">SPA (HTML + CSS + Vanilla JS)</span>
-                        <div class="tech-desc">Single Page Application architecture built with Vanilla JS for dynamic user experience.</div>
-                    </div>
-                    <div class="tech-item">
-                        <span class="tech-tag">Python + FastAPI + Postgres</span>
-                        <div class="tech-desc">High-performance Python backend framework used for building the core RESTful API.</div>
-                    </div>
-                    <div class="tech-item">
-                        <span class="tech-tag">VPS + GitHub Pages</span>
-                        <div class="tech-desc">Backend deployed on a VPS, frontend deployed on a GitHub Pages.</div>
-                    </div>
-                    <div class="tech-item">
-                        <span class="tech-tag">CI/CD (GitHub Actions)</span>
-                        <div class="tech-desc">Automated backend deployment pipelines to streamline updates.</div>
-                    </div>
-
-                </div>
-            </article>
         </div>
 
         <div class="project-category" id="proj-completed">
             <h3>Завершенные</h3>
+
+            <article class="project-card">
+                <h4>LibreSpeed via Docker Compose</h4>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <span class="tech-tag">Docker Compose</span>
+                        <div class="tech-desc"></div>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-tag">Nginx</span>
+                        <div class="tech-desc"></div>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-tag">S3 backups</span>
+                        <div class="tech-desc"></div>
+                    </div>
+                </div>
+            </article>
 
             <article class="project-card">
                 <h4>Novella (February Revolution)</h4>
