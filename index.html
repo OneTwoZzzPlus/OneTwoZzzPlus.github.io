@@ -90,7 +90,7 @@
                         <span class="tech-tag">Python + FastAPI + Postgres (SQL)</span>
                         <div class="tech-desc">
                             RESTful API на Python FastAPI, манипуляции с БД посредством SQL.
-                            Стандартный CRUD и умный поиск через rapidfuze.
+                            Стандартный CRUD, умный поиск через rapidfuze и парсинг открытых источников.
                         </div>
                     </div>
                     <div class="tech-item">
@@ -137,52 +137,84 @@
             <h3>Завершенные</h3>
 
             <article class="project-card">
-                <h4>LibreSpeed via Docker Compose</h4>
+                <h4><a href="https://github.com/OneTwoZzzPlus/librespeed">LibreSpeed via Docker Compose</a> [2026]</h4>
+                <div class="project-links">
+                    Контейнерная инфрастуктура развертывания проекта измерителя скорости
+                    <a href="https://github.com/librespeed/speedtest">LibreSpeed</a>,
+                    запускающая несколько экземляров backend, балансировщик, БД для телеметрии.
+                </div>
                 <div class="tech-stack">
                     <div class="tech-item">
                         <span class="tech-tag">Docker Compose</span>
-                        <div class="tech-desc"></div>
+                        <div class="tech-desc">
+                            Вся инфраструктура была описана как код (IaC) для произведения миграции из systemd-юнитов.
+                            Обеспечена настройка с помощью переменных окружения (.env), настроен порядок запуска
+                            с помощью healthcheck и depends_on.
+                        </div>
                     </div>
                     <div class="tech-item">
                         <span class="tech-tag">Nginx</span>
-                        <div class="tech-desc"></div>
+                        <div class="tech-desc">
+                            Nginx настроен в качестве балансировщика на 3 запущенных бекенда с возможностью
+                            масштабирования. Настроена фильтрация по домену и принудительный редирект на https.
+                            Сертификация выполняется с помощью CertBot.
+                            Помимо этого, были добавлены заголовки безопасности и скрыты упоминания Nginx.
+                        </div>
                     </div>
                     <div class="tech-item">
-                        <span class="tech-tag">S3 backups</span>
-                        <div class="tech-desc"></div>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card">
-                <h4>Novella (February Revolution)</h4>
-                <div class="tech-stack">
-                    <div class="tech-item">
-                        <span class="tech-tag">Unity</span>
-                        <div class="tech-desc"></div>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card">
-                <h4>Chicken Coop Controller</h4>
-                <div class="tech-stack">
-                    <div class="tech-item">
-                        <span class="tech-tag">Arduino</span>
-                        <div class="tech-desc"></div>
-                    </div>
-                    <div class="tech-item">
-                        <span class="tech-tag">Kotlin</span>
-                        <div class="tech-desc"></div>
+                        <span class="tech-tag">Backups: S3 + bash + logrotate </span>
+                        <div class="tech-desc">
+                            Самописные контейнеры для резервного копирования демонстрируют BashOps-подход.
+                            Скрипты создают дампы PostgreSQL и архивируют логи nginx через logrotate, затем
+                            отправляют их в S3-совместимое облачное хранилище.
+                            Запуск по cron-расписанию, определяемому через переменные окружения.
+                        </div>
                     </div>
                 </div>
             </article>
 
             <article class="project-card">
-                <h4>RZD Mobile App</h4>
+                <h4><a href="https://github.com/OneTwoZzzPlus/novella">Novella (February Revolution)</a> [2025]</h4>
+                <div class="project-links">
+                    Игра-новелла про революцию как проект по истории.
+                </div>
                 <div class="tech-stack">
                     <div class="tech-item">
-                        <span class="tech-tag">Unity</span>
+                        <span class="tech-tag">Unity & C#</span>
+                        <div class="tech-desc">Игра, созданная на основе Ink скриптов, собираемая под web.</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <h4><a href="https://github.com/OneTwoZzzPlus/chicken">Chicken Coop Controller</a> [2023]</h4>
+                <div class="project-links">
+                    Контроллер переферии курятника, снабженный мобильным приложением для управления и уведомлений.
+                </div>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <span class="tech-tag">Arduino & C++</span>
+                        <div class="tech-desc">
+                            Разработана как прошивка, так и печатная плата, контроллера, управляемого ATmega328P.
+                            Для подключения к сети и api интерфейса управления используется Wemos ESP8266.
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-tag">Android Studio & Kotlin</span>
+                        <div class="tech-desc">
+                            Приложение, получающее конфигурацию с контроллера и предоставляющее графический интерфейс
+                            управления и мониторинга подключенных устройств.
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <h4><a href="https://onetwozzzplus.github.io/rzd/">RZD Mobile App</a> [2023]</h4>
+                Мобильный помощник по правилам безопасного поведения на объектах РЖД. Только для телефона.
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <span class="tech-tag">Unity & C#</span>
                         <div class="tech-desc"></div>
                     </div>
                 </div>
