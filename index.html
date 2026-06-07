@@ -26,7 +26,7 @@
                 <h3>Reviews</h3>
             </div>
             <div class="tile-btns">
-                <a class="bento-btn" href="https://onetwozzzplus.github.io/reviews/">Сайт</a>
+                <a class="bento-btn" href="https://onetwozzzplus.github.io/reviews/">К отзывам</a>
                 <a class="bento-btn" data-target="#proj-reviews">Что это?</a>
             </div>
         </div>
@@ -37,7 +37,8 @@
                 <h3>ITMO.STUDY</h3>
             </div>
             <div class="tile-btns">
-                <a class="bento-btn" href="https://github.com/OneTwoZzzPlus/ITMO.STUDY/#материалы-и-лабораторные-работы-икс-итмо">GitHub</a>
+                <a class="bento-btn" href="https://github.com/OneTwoZzzPlus/ITMO.STUDY/#материалы-и-лабораторные-работы-икс-итмо">Repository</a>
+                <a class="bento-btn" href="https://github.com/OneTwoZzzPlus/ITMO.STUDY/blob/main/physics.md">Physics labs</a>
                 <a class="bento-btn" data-target="#proj-itmo">Что это?</a>
             </div>
         </div>
@@ -48,8 +49,10 @@
                 <h3>Обо мне</h3>
             </div>
             <p>
+                Меня зовут Иван. 
                 Я учусь на направлении "Программирование в инфокоммуникационных системах" в Университете ИТМО.
-                Мне нравится играть на гитаре, играть в Майнкрафт и тусить с девчонками.
+                Мне нравится создавать программное обеспечение, изучать технологии DevOps и NetOps.
+                Помимо этого я увлекаюсь игрой на гитаре, люблю мастерить небольшие электронные устройства.
             </p>
             <div class="tile-btns">
                 <a class="bento-btn" href="https://github.com/OneTwoZzzPlus/">GitHub</a>
@@ -62,158 +65,168 @@
     </section>
 
     <section id="projects">
-        <h2>Проекты</h2>
 
         <div class="project-category">
-            <h3>Активные</h3>
+            <h3>Активные проекты</h3>
 
             <article class="project-card" id="proj-reviews">
-                <h4>Reviews</h4>
+                <div class="project-header">
+                    <h4>Reviews</h4>
+                    <div class="project-tags">
+                        <span class="tag">Vanilla JS</span>
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Ansible</span>
+                        <span class="tag">Docker Compose</span>
+                        <span class="tag">CI/CD</span>
+                    </div>
+                </div>
                 <div class="project-links">
-                    <a href="https://onetwozzzplus.github.io/reviews/">Веб-сайт</a>
-                    и <a href="https://github.com/OneTwoZzzPlus/reviews/releases">расширение (chromium)</a>
-                    с возможностью поиска отзывов на преподавателей.
-                    Есть <a href="https://github.com/OneTwoZzzPlus/reviews">frontend</a>
-                    и <a href="https://github.com/OneTwoZzzPlus/reviews-backend">backend</a> репозитории.
+                    <a href="https://onetwozzzplus.github.io/reviews/">Веб-сайт</a> • 
+                    <a href="https://github.com/OneTwoZzzPlus/reviews/releases">Расширение (Chromium)</a> • 
+                    <a href="https://github.com/OneTwoZzzPlus/reviews">Frontend репозиторий</a> • 
+                    <a href="https://github.com/OneTwoZzzPlus/reviews-backend">Backend репозиторий</a>
                 </div>
-                <div class="tech-stack">
-                    <div class="tech-item">
-                        <span class="tech-tag">Vanilla JS + HTML + CSS</span>
-                        <div class="tech-desc">
-                            SPA архитектура с хэш-маршрутизацией на Vanilla JS.
-                            Никаких фреймворков: самописные routing, state, render,
-                            скрипты сборки и автоматического релиза расширения (esbuild и gh).
-                            Развёртывание на GitHub Pages.
-                        </div>
-                    </div>
-                    <div class="tech-item">
-                        <span class="tech-tag">Python + FastAPI + Postgres (SQL)</span>
-                        <div class="tech-desc">
-                            RESTful API на Python FastAPI, манипуляции с БД посредством SQL.
-                            Стандартный CRUD, умный поиск через rapidfuze и парсинг открытых источников.
-                        </div>
-                    </div>
-                    <div class="tech-item">
-                        <span class="tech-tag">Docker Compose + Nginx</span>
-                        <div class="tech-desc">
-                            Обратный прокси сервер nginx для безопасности, сертификаты Let's Encrypt.
-                            Compose для описания stateful сервисов и экземляра backend.
-                        </div>
-                    </div>
-                    <div class="tech-item">
-                        <span class="tech-tag">CI/CD (GitHub Actions)</span>
-                        <div class="tech-desc">Автоматическая сборка и развёртывание backend сервиса на VPS.</div>
-                    </div>
-                </div>
+                <ul class="project-bullets">
+                    <li><strong>Продукт и аудитория.</strong> Разработал и запустил платформу отзывов на преподавателей, которой воспользовались 3000+ студентов. Собрал и структурировал базу из более чем 3000 уникальных отзывов.</li>
+                    <li><strong>Frontend.</strong> Разработал SPA-архитектуру на Vanilla JS с кастомной хэш-маршрутизацией и управлением состоянием без использования фреймворков. Настроил сборку через esbuild.</li>
+                    <li><strong>Backend.</strong> Реализовал RESTful API на FastAPI с интеграцией умного поиска преподавателей (rapidfuze) и парсингом открытых источников данных.</li>
+                    <li><strong>Infrastructure & IaC.</strong> Полностью автоматизировал развертывание проекта с помощью Ansible. Написал плейбуки для конфигурации нод, управления Docker Compose стеками, оркестрации бэкенда и автоматического выпуска SSL (Certbot) под Nginx прокси.</li>
+                    <li><strong>DevOps.</strong> Разделил хранение на persistent и runtime контейнеры. Настроил сбор метрик с бэкенда через Prometheus. Автоматизировал пайплайн сборки образов и удаленного деплоя через GitHub Actions (CI/CD).</li>
+                </ul>
             </article>
 
             <article class="project-card" id="proj-itmo">
-                <h4>ITMO.STUDY</h4>
+                <div class="project-header">
+                    <h4>ITMO.STUDY</h4>
+                    <div class="project-tags">
+                        <span class="tag">Labs</span>
+                    </div>
+                </div>
                 <div class="project-links">
-                    <a href="https://github.com/OneTwoZzzPlus/ITMO.STUDY/">Хранилище</a>
-                    со всеми работами, выполненными во время учебы в университете.
+                    <a href="https://github.com/OneTwoZzzPlus/ITMO.STUDY/">Репозиторий-хранилище</a>
                 </div>
-                <div class="tech-stack">
-                    <div class="tech-item">
-                        <span class="tech-tag">Physics Labs</span>
-                        <div class="tech-desc">
-                            <a href="https://github.com/OneTwoZzzPlus/ITMO.STUDY/blob/main/physics.md">Агрегированная таблица</a>
-                            со ссылками на лабораторные работы по физике.
-                        </div>
-                    </div>
-                    <div class="tech-item">
-                        <span class="tech-tag">LaTeX ГОСТ 7.32</span>
-                        <div class="tech-desc">
-                            Шаблон (в <a href="https://ru.overleaf.com/read/wpxwxgqdcxjd#39c229">overleaf</a>)
-                            ГОСТ 7.32 отчётов в LaTeX.
-                        </div>
+                <ul class="project-bullets">
+                    <li> Создал и постоянно обновляю базу учебных материалов и выполненных лабораторных работ за время обучения в университете.</li>
+                    <li> Создал публичный и гибкий шаблон для оформления отчетов по <strong>ГОСТ 7.32</strong> в системе LaTeX (размещен на Overleaf).</li>
+                    <li> Агрегировал огромное количество выполненных лабораторных по физике в единую таблицу.</li>
+                </ul>
+            </article>
+        </div>
+        
+        <div class="project-category" id="proj-completed">
+            <h3>Pet-проекты</h3>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <h4>LibreSpeed via Docker Compose <span class="project-date">[2026]</span></h4>
+                    <div class="project-tags">
+                        <span class="tag">Nginx</span>
+                        <span class="tag">BashOps</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">S3 Storage</span>
+                        <span class="tag">Docker Compose</span>
                     </div>
                 </div>
+                <div class="project-links">
+                    <a href="https://github.com/OneTwoZzzPlus/librespeed">Репозиторий инфраструктуры</a> • 
+                    <a href="https://github.com/librespeed/speedtest">Оригинальный LibreSpeed</a>
+                </div>
+                <ul class="project-bullets">
+                    <li><strong>Инфраструктура как код (IaC).</strong> Успешно мигрировал систему с классических systemd-юнитов на Docker Compose. Реализовал конфигурацию через .env, упорядочил запуск сервисов с помощью healthcheck и depends_on.</li>
+                    <li><strong>Балансировка и безопасность.</strong> Настроил Nginx в качестве отказоустойчивого балансировщика нагрузки для 3-х параллельно запущенных инстансов бэкенда. Добавил принудительный SSL (Certbot/HSTS), скрыл мета-данные сервера и внедрил security-заголовки.</li>
+                    <li><strong>Автоматизация бэкапов.</strong> Написал кастомные Bash-скрипты внутри Docker для дампа PostgreSQL и ротации логов Nginx (logrotate) с последующей отправкой архивов в S3 по расписанию (cron).</li>
+                </ul>
             </article>
 
+            <article class="project-card">
+                <div class="project-header">
+                    <h4>SSO Auth Service <span class="project-date">[2025]</span></h4>
+                    <div class="project-tags">
+                        <span class="tag">Go</span>
+                        <span class="tag">gRPC</span>
+                        <span class="tag">Next.js</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Docker Compose</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/OneTwoZzzPlus/sso-service">Репозиторий проекта</a>
+                </div>
+                <ul class="project-bullets">
+                    <li><strong>Архитектура и бэкенд.</strong> Разработал микросервисную систему сквозной аутентификации и авторизации (SSO) на Go. Архитектура приложения включает в себя gRPC-сервер для быстрого межсервисного общения, REST Gateway для обработки внешних HTTP-запросов и SMTP-модуль для отправки сервисных писем.</li>
+                    <li><strong>Интерфейсы и протоколы.</strong> Спроектировал строгие контракты взаимодействия между компонентами на базе Protocol Buffers. Настроил скрипты автоматической генерации кода (Protobuf) и интегрировал gRPC-web клиент для прямой связи клиентской части с бэкенд-сервисами.</li>
+                    <li><strong>Frontend.</strong> Создал пользовательский веб-интерфейс на TypeScript и Next.js с динамическими формами авторизации и регистрации, отправляющими строго типизированные gRPC-запросы напрямую в микросервисы.</li>
+                    <li><strong>Инфраструктура и хранение.</strong> Организовал реляционное хранилище пользователей и прав доступа на базе PostgreSQL. Полностью контейнеризировал систему, настроив запуск и автоматическую сборку изолированных окружений фронтенда, бэкенда и базы данных через Docker Compose.</li>
+                </ul>
+            </article>
         </div>
 
         <div class="project-category" id="proj-completed">
-            <h3>Завершенные</h3>
+            <h3>Завершенные проекты</h3>
 
             <article class="project-card">
-                <h4><a href="https://github.com/OneTwoZzzPlus/librespeed">LibreSpeed via Docker Compose</a> [2026]</h4>
+                <div class="project-header">
+                    <h4>Novella (February Revolution) <span class="project-date">[2025]</span></h4>
+                    <div class="project-tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">Ink Script</span>
+                        <span class="tag">WebGL</span>
+                    </div>
+                </div>
                 <div class="project-links">
-                    Контейнерная инфрастуктура развертывания проекта измерителя скорости
-                    <a href="https://github.com/librespeed/speedtest">LibreSpeed</a>,
-                    запускающая несколько экземляров backend, балансировщик, БД для телеметрии.
+                    <a href="https://onetwozzzplus.github.io/Novella/">Web-приложение</a> • 
+                    <a href="https://github.com/OneTwoZzzPlus/Novella">Репозиторий игры</a>
                 </div>
-                <div class="tech-stack">
-                    <div class="tech-item">
-                        <span class="tech-tag">Docker Compose</span>
-                        <div class="tech-desc">
-                            Вся инфраструктура была описана как код (IaC) для произведения миграции из systemd-юнитов.
-                            Обеспечена настройка с помощью переменных окружения (.env), настроен порядок запуска
-                            с помощью healthcheck и depends_on.
-                        </div>
-                    </div>
-                    <div class="tech-item">
-                        <span class="tech-tag">Nginx</span>
-                        <div class="tech-desc">
-                            Nginx настроен в качестве балансировщика на 3 запущенных бекенда с возможностью
-                            масштабирования. Настроена фильтрация по домену и принудительный редирект на https.
-                            Сертификация выполняется с помощью CertBot.
-                            Помимо этого, были добавлены заголовки безопасности и скрыты упоминания Nginx.
-                        </div>
-                    </div>
-                    <div class="tech-item">
-                        <span class="tech-tag">Backups: S3 + bash + logrotate </span>
-                        <div class="tech-desc">
-                            Самописные контейнеры для резервного копирования демонстрируют BashOps-подход.
-                            Скрипты создают дампы PostgreSQL и архивируют логи nginx через logrotate, затем
-                            отправляют их в S3-совместимое облачное хранилище.
-                            Запуск по cron-расписанию, определяемому через переменные окружения.
-                        </div>
-                    </div>
-                </div>
+                <ul class="project-bullets">
+                    <li>Разработал в команде историческую игру-новеллу.</li>
+                    <li>Реализовал игру на движке Unity с использованием скриптового языка диалогов Ink.</li>
+                    <li>Оптимизировал проект и настроил CI/CD для сборки под WebGL для воспроизведения игры прямо в браузере.</li>
+                </ul>
             </article>
 
             <article class="project-card">
-                <h4><a href="https://github.com/OneTwoZzzPlus/novella">Novella (February Revolution)</a> [2025]</h4>
-                <div class="project-links">
-                    Игра-новелла про революцию как проект по истории.
-                </div>
-                <div class="tech-stack">
-                    <div class="tech-item">
-                        <span class="tech-tag">Unity & C#</span>
-                        <div class="tech-desc">Игра, созданная на основе Ink скриптов, собираемая под web.</div>
+                <div class="project-header">
+                    <h4>Chicken Coop Controller <span class="project-date">[2023]</span></h4>
+                    <div class="project-tags">
+                        <span class="tag">Arduino</span>
+                        <span class="tag">ATmega328P / ESP8266</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">Android Studio</span>
+                        <span class="tag">Kotlin</span>
                     </div>
                 </div>
+                <div class="project-links">
+                    <a href="https://github.com/OneTwoZzzPlus/chicken">Репозиторий системы</a> • 
+                    <a href="https://github.com/OneTwoZzzPlus/chicken-arduino">Прошивка Arduino</a> • 
+                    <a href="https://github.com/OneTwoZzzPlus/chicken-controller">Приложение Android</a>
+                </div>
+                <ul class="project-bullets">
+                    <li><strong>Аппаратная часть.</strong> Спроектировал принципиальную печатную плату и написал прошивку на C++ для микроконтроллера ATmega328P. Интегрировал модуль Wemos ESP8266 для обеспечения сетевых функций и работы с API.</li>
+                    <li><strong>Мобильная разработка.</strong> Написал нативное Android-приложение (Kotlin), взаимодействующее с контроллером для удаленного мониторинга датчиков и управления периферией.</li>
+                </ul>
             </article>
 
             <article class="project-card">
-                <h4><a href="https://github.com/OneTwoZzzPlus/chicken">Chicken Coop Controller</a> [2023]</h4>
-                <div class="project-links">
-                    Контроллер переферии курятника, снабженный мобильным приложением для управления и уведомлений.
-                </div>
-                <div class="tech-stack">
-                    <div class="tech-item">
-                        <span class="tech-tag">Arduino & C++</span>
-                        <div class="tech-desc">
-                            Разработана как прошивка, так и печатная плата, контроллера, управляемого ATmega328P.
-                            Для подключения к сети и api интерфейса управления используется Wemos ESP8266.
-                        </div>
-                    </div>
-                    <div class="tech-item">
-                        <span class="tech-tag">Android Studio & Kotlin</span>
-                        <div class="tech-desc">
-                            Приложение, получающее конфигурацию с контроллера и предоставляющее графический интерфейс
-                            управления и мониторинга подключенных устройств.
-                        </div>
+                <div class="project-header">
+                    <h4>RZD Mobile App <span class="project-date">[2023]</span></h4>
+                    <div class="project-tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">UI/UX</span>
+                        <span class="tag">WebGL</span>
                     </div>
                 </div>
-            </article>
-
-            <article class="project-card">
-                <h4><a href="https://onetwozzzplus.github.io/rzd/">RZD Mobile App</a> [2023]</h4>
                 <div class="project-links">
-                    Мобильный помощник по правилам безопасного поведения на объектах РЖД. Только для телефона.
+                    <a href="https://onetwozzzplus.github.io/rzd/">Web-приложение</a> • 
+                    <a href="https://github.com/OneTwoZzzPlus/rzd">Репозиторий сайта</a> • 
+                    <a href="https://github.com/OneTwoZzzPlus/rzdUnity">Репозиторий приложения</a>
                 </div>
+                <ul class="project-bullets">
+                    <li>Разработал в команде мобильный интерактивный помощник, обучающий правилам безопасного поведения на объектах РЖД (запускается исключительно на мобильных устройствах).</li>
+                </ul>
             </article>
         </div>
     </section>

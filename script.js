@@ -18,10 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!url) return;
 
             if (url.startsWith('#')) {
-                // Если это якорь (как в Other Projects), скроллим плавно
                 smoothScroll(url);
             } else {
-                // Если это ссылка, переходим
                 window.location.href = url;
             }
         });
@@ -41,38 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (externalUrl) {
                 window.location.href = externalUrl;
             }
-        });
-    });
-
-    // 2. Interactive Tech Tags Expansion Logic
-    const techItems = document.querySelectorAll('.tech-item');
-
-    techItems.forEach(item => {
-        const desc = item.querySelector('.tech-desc');
-
-        // On Hover: Calculate the exact natural height and expand smoothly
-        item.addEventListener('mouseenter', () => {
-            // Temporarily set height to auto to get the real content height
-            desc.style.height = 'auto';
-            const height = desc.scrollHeight + 'px';
-
-            // Reset to 0 so the transition can happen
-            desc.style.height = '0px';
-
-            // Force reflow
-            desc.offsetHeight;
-
-            // Apply expanded styles
-            desc.style.height = height;
-            desc.style.opacity = '1';
-            desc.style.marginTop = '0.5rem';
-        });
-
-        // On Mouse Leave: Collapse back to 0
-        item.addEventListener('mouseleave', () => {
-            desc.style.height = '0px';
-            desc.style.opacity = '0';
-            desc.style.marginTop = '0px';
         });
     });
 });

@@ -151,33 +151,6 @@ a:hover {
     text-decoration: none;
 }
 
-/* --- Section 2: About Me --- */
-#about {
-    margin-bottom: 4rem;
-}
-
-.social-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 0rem;
-}
-
-.social-btn {
-    background: rgba(255, 255, 255, 1);
-    padding: 0.5rem 1.25rem;
-    border-radius: 20px;
-    font-weight: 600;
-    font-size: 0.875rem;
-    color: var(--text-primary);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-}
-
-.social-btn:hover {
-    background: var(--accent-gradient-hover);
-    text-decoration: none;
-}
-
 /* --- Section 3: Projects --- */
 .project-category {
     margin-bottom: 3rem;
@@ -196,41 +169,62 @@ a:hover {
     margin-bottom: 1.5rem;
 }
 
-.project-links {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-}
-
-/* Tech Tags & Expansion Logic */
-.tech-stack {
+.project-header {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
-.tech-item {
+.project-header h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.project-date {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: normal;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.tag {
     background: #ffffff;
     border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 0.5rem 0.75rem;
-    cursor: pointer;
-}
-
-.tech-tag {
+    border-radius: 6px;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
     font-weight: 600;
-    font-size: 0.9rem;
     color: var(--text-primary);
-    display: inline-block;
 }
 
-.tech-desc {
+.project-links {
     font-size: 0.85rem;
+    margin-bottom: 0.75rem;
     color: var(--text-secondary);
-    /* Set up for JS height calculation */
-    height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: height 0.3s ease-out, opacity 0.3s ease-out, margin-top 0.3s ease-out;
+}
+
+.project-bullets {
+    margin: 0;
+    padding-left: 1.2rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.project-bullets li {
+    margin-bottom: 0.4rem;
+}
+
+.project-bullets li:last-child {
+    margin-bottom: 0;
 }
 
 /* --- Footer --- */
@@ -242,9 +236,40 @@ footer {
     border-top: 1px solid #f1f5f9;
 }
 
-/* --- Responsive Layout --- */
+/* --- Responsive Layout & Mobile Fixes --- */
 @media (max-width: 620px) {
+    .container {
+        padding: 1rem 1rem;
+    }
+
     .bento-grid {
-        grid-template-columns: 1fr; /* Stacks to single column */
+        grid-template-columns: 1fr; 
+        gap: 1rem;
+    }
+
+    .bento-tile {
+        padding: 1.2rem;
+    }
+
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+    
+    .project-card {
+        padding: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .project-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .project-header h4 {
+        font-size: 1.15rem;
+    }
+
+    .project-bullets {
+        padding-left: 1rem; 
+        font-size: 0.85rem;
     }
 }
