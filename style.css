@@ -8,7 +8,7 @@
     --accent-gradient-hover: linear-gradient(135deg, #bae6fd 0%, #bbf7d0 100%);
     --card-bg: #f8fafc;
     --border-radius: 12px;
-    --transition: all 0.3s ease;
+    --transition: all 0.25s ease;
 }
 
 html {
@@ -129,26 +129,28 @@ a:hover {
     flex-grow: 1;
 }
 
+/* Кнопки в Bento-карточках (акцентные плашки-капсулы) */
 .bento-btn {
     flex: 0 1 auto;
-    padding: 0.5rem 1rem;
+    padding: 0.35rem 0.8rem;
     white-space: nowrap;
     z-index: 2;
-    background: rgba(255, 255, 255, 1);
+    background: #ffffff;
     border: none;
     border-radius: 20px;
     font-family: inherit;
     font-weight: 600;
-    font-size: 0.875rem;
-    cursor: default;
+    font-size: 0.8rem;
+    cursor: pointer;
     transition: var(--transition);
     color: var(--text-primary);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .bento-btn:hover {
     background: var(--accent-gradient-hover);
     text-decoration: none;
+    transform: translateY(-1px);
 }
 
 /* --- Section 3: Projects --- */
@@ -227,6 +229,87 @@ a:hover {
     margin-bottom: 0;
 }
 
+/* --- Pure CSS Tab Switcher Component --- */
+.project-tabs input[type="radio"] {
+    display: none;
+}
+
+.tab-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.tab-buttons.grid-2-col {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.tab-buttons.grid-4-col {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Переключатели табов в карточках (структурные элементы) */
+.tab-btn {
+    padding: 0.35rem 0.6rem;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition);
+    user-select: none;
+    box-shadow: none;
+}
+
+.tab-btn:hover {
+    background: #ffffff;
+    color: var(--text-primary);
+    border-color: #cbd5e1;
+}
+
+/* Radio Checked Active States */
+.project-tabs .tab-input-1:checked ~ .tab-buttons .tab-lbl-1,
+.project-tabs .tab-input-2:checked ~ .tab-buttons .tab-lbl-2,
+.project-tabs .tab-input-3:checked ~ .tab-buttons .tab-lbl-3,
+.project-tabs .tab-input-4:checked ~ .tab-buttons .tab-lbl-4 {
+    background: var(--text-primary);
+    color: #ffffff;
+    border-color: var(--text-primary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.tab-content {
+    display: none;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 1rem 1.2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    animation: fadeIn 0.25s ease-in-out;
+}
+
+.tab-text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.project-tabs .tab-input-1:checked ~ .content-1,
+.project-tabs .tab-input-2:checked ~ .content-2,
+.project-tabs .tab-input-3:checked ~ .content-3,
+.project-tabs .tab-input-4:checked ~ .content-4 {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 /* --- Footer --- */
 footer {
     text-align: center;
@@ -266,6 +349,12 @@ footer {
 
     .project-header h4 {
         font-size: 1.15rem;
+    }
+
+    .tab-buttons,
+    .tab-buttons.grid-2-col,
+    .tab-buttons.grid-4-col {
+        grid-template-columns: 1fr;
     }
 
     .project-bullets {
