@@ -16,7 +16,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     background-color: var(--bg-color);
     color: var(--text-primary);
     line-height: 1.6;
@@ -30,7 +30,10 @@ body {
     padding: 2rem 1.5rem;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     margin-top: 0;
     color: var(--text-primary);
 }
@@ -60,7 +63,7 @@ a:hover {
     font-weight: 600;
     color: var(--text-primary);
     text-decoration: none;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .lang-switch:hover {
@@ -96,7 +99,7 @@ a:hover {
 
 .bento-tile:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
 }
 
 .tile-btns {
@@ -129,7 +132,7 @@ a:hover {
     flex-grow: 1;
 }
 
-/* Кнопки в Bento-карточках (акцентные плашки-капсулы) */
+/* Кнопки в Bento-карточках */
 .bento-btn {
     flex: 0 1 auto;
     padding: 0.35rem 0.8rem;
@@ -250,7 +253,7 @@ a:hover {
     grid-template-columns: repeat(4, 1fr);
 }
 
-/* Переключатели табов в карточках (структурные элементы) */
+/* Переключатели табов в карточках */
 .tab-btn {
     padding: 0.35rem 0.6rem;
     background: rgba(255, 255, 255, 0.6);
@@ -272,11 +275,8 @@ a:hover {
     border-color: #cbd5e1;
 }
 
-/* Radio Checked Active States */
-.project-tabs .tab-input-1:checked ~ .tab-buttons .tab-lbl-1,
-.project-tabs .tab-input-2:checked ~ .tab-buttons .tab-lbl-2,
-.project-tabs .tab-input-3:checked ~ .tab-buttons .tab-lbl-3,
-.project-tabs .tab-input-4:checked ~ .tab-buttons .tab-lbl-4 {
+/* Активное состояние таба */
+.tab-btn.active {
     background: var(--text-primary);
     color: #ffffff;
     border-color: var(--text-primary);
@@ -292,22 +292,25 @@ a:hover {
     animation: fadeIn 0.25s ease-in-out;
 }
 
+.tab-content.active {
+    display: block;
+}
+
 .tab-text {
     margin: 0;
     font-size: 0.9rem;
     color: var(--text-secondary);
 }
 
-.project-tabs .tab-input-1:checked ~ .content-1,
-.project-tabs .tab-input-2:checked ~ .content-2,
-.project-tabs .tab-input-3:checked ~ .content-3,
-.project-tabs .tab-input-4:checked ~ .content-4 {
-    display: block;
-}
-
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(4px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* --- Footer --- */
@@ -326,7 +329,7 @@ footer {
     }
 
     .bento-grid {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
 
@@ -334,9 +337,13 @@ footer {
         padding: 1.2rem;
     }
 
-    h2 { font-size: 1.5rem; }
-    h3 { font-size: 1.25rem; }
-    
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1.25rem;
+    }
+
     .project-card {
         padding: 1.2rem;
         margin-bottom: 1rem;
@@ -358,7 +365,7 @@ footer {
     }
 
     .project-bullets {
-        padding-left: 1rem; 
+        padding-left: 1rem;
         font-size: 0.85rem;
     }
 }
