@@ -9,9 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // 0. Bento Tiles
-    const tiles = document.querySelectorAll(".bento-tile");
-    tiles.forEach((tile) => {
+    // 0. Bento-плитки
+    document.querySelectorAll(".bento-tile").forEach((tile) => {
         tile.addEventListener("click", () => {
             const url = tile.getAttribute("data-url");
             if (!url) return;
@@ -24,9 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 1. Bento Button Smooth Scrolling Logic
-    const bentoButtons = document.querySelectorAll(".bento-btn");
-    bentoButtons.forEach((button) => {
+    // 1. Кнопки внутри bento-плиток
+    document.querySelectorAll(".bento-btn").forEach((button) => {
         button.addEventListener("click", (e) => {
             e.stopPropagation();
 
@@ -41,35 +39,66 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 2. Универсальный переключатель табов
-    document.querySelectorAll(".project-tabs").forEach((tabsEl) => {
-        const inputs = tabsEl.querySelectorAll('input[type="radio"]');
-        const labels = tabsEl.querySelectorAll(".tab-btn");
-        const contents = tabsEl.querySelectorAll(".tab-content");
+    // 2. Скрытие bento-кнопок, которые не помещаются в строку.
+    // Прячем кнопки с конца, пока ряд не перестанет переполняться.
+    const fitBentoButtons = () => {
+        document.querySelectorAll(".tile-btns").forEach((group) => {
+            const buttons = [...group.children];
+            buttons.forEach((btn) => (btn.hidden = false));
 
-        const getTabId = (el) => {
-            for (const cls of el.classList) {
-                const m = cls.match(/^(?:tab-input|tab-lbl|content)-(\d+)$/);
-                if (m) return m[1];
+            for (
+                let i = buttons.length - 1;
+                i >= 0 && group.scrollWidth > group.clientWidth;
+                i--
+            ) {
+                buttons[i].hidden = true;
             }
-            return null;
-        };
+        });
+    };
 
-        const update = () => {
-            const checked = Array.from(inputs).find((i) => i.checked);
-            if (!checked) return;
-            const activeId = getTabId(checked);
-
-            labels.forEach((l) =>
-                l.classList.toggle("active", getTabId(l) === activeId),
-            );
-            contents.forEach((c) =>
-                c.classList.toggle("active", getTabId(c) === activeId),
-            );
-        };
-
-        inputs.forEach((input) => input.addEventListener("change", update));
-
-        update();
+    let resizeFrame = null;
+    window.addEventListener("resize", () => {
+        cancelAnimationFrame(resizeFrame);
+        resizeFrame = requestAnimationFrame(fitBentoButtons);
     });
+
+    fitBentoButtons();
+    // Шрифт Inter может загрузиться позже и поменять ширину кнопок
+    document.fonts.ready.then(fitBentoButtons);
+
+    // 3. Вкладки в карточках проектов
+    const initTabs = (tabsEl) => {
+        const buttons = [...tabsEl.querySelectorAll(".tab-btn")];
+        const panels = [...tabsEl.querySelectorAll(".tab-content")];
+        if (!buttons.length) return;
+
+        const activate = (id) => {
+            buttons.forEach((btn) => {
+                const isActive = btn.dataset.tab === id;
+                btn.classList.toggle("active", isActive);
+                btn.setAttribute("aria-pressed", String(isActive));
+            });
+            panels.forEach((panel) => {
+                panel.hidden = panel.dataset.tab !== id;
+            });
+        };
+
+        buttons.forEach((btn) => {
+            btn.addEventListener("click", () => activate(btn.dataset.tab));
+            btn.addEventListener("keydown", (e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    activate(btn.dataset.tab);
+                }
+            });
+        });
+
+        // Начальная вкладка: та, что помечена .active в HTML, иначе первая
+        const initial =
+            buttons.find((btn) => btn.classList.contains("active")) ||
+            buttons[0];
+        activate(initial.dataset.tab);
+    };
+
+    document.querySelectorAll(".project-tabs").forEach(initTabs);
 });

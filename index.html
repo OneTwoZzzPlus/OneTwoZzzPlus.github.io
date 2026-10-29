@@ -116,64 +116,24 @@
             </section>
 
             <section id="projects">
+                <!-- ============ АКТИВНЫЕ ПРОЕКТЫ ============ -->
                 <div class="project-category">
                     <h3>Активные проекты</h3>
 
-                    <!-- Project: ITMO.STUDY -->
-                    <article class="project-card" id="proj-itmo">
-                        <div class="project-header">
-                            <h4>ITMO.STUDY</h4>
-                            <div class="project-tags">
-                                <span class="tag">Study</span>
-                                <span class="tag">Labs</span>
-                            </div>
-                        </div>
-                        <div class="project-links">
-                            <a
-                                href="https://github.com/OneTwoZzzPlus/ITMO.STUDY/"
-                                >Репозиторий-хранилище</a
-                            >
-                            •
-                            <a
-                                href="https://github.com/OneTwoZzzPlus/ITMO.STUDY/blob/main/physics.md"
-                                >Physics labs</a
-                            >
-                            •
-                            <a
-                                href="https://www.overleaf.com/read/hxxkqnktktfn#64f27e"
-                                >LaTeX ГОСТ 7.32</a
-                            >
-                        </div>
-
-                        <ul class="project-bullets">
-                            <li>
-                                Открытая база знаний и выполнений лабораторных
-                                работ за время обучения в ИТМО.
-                            </li>
-                            <li>
-                                Агрегированная таблица лабораторных работ по
-                                физике.
-                            </li>
-                            <li>
-                                Шаблон для оформления отчетов по
-                                <strong>ГОСТ 7.32</strong> в системе LaTeX
-                                (доступен на Overleaf).
-                            </li>
-                        </ul>
-                    </article>
-
-                    <!-- Project: Reviews -->
                     <article class="project-card" id="proj-reviews">
                         <div class="project-header">
-                            <h4>Reviews</h4>
+                            <h4>
+                                Reviews
+                                <span class="project-date">[2025–2026]</span>
+                            </h4>
                             <div class="project-tags">
-                                <span class="tag">Vanilla JS</span>
                                 <span class="tag">FastAPI</span>
                                 <span class="tag">PostgreSQL</span>
+                                <span class="tag">Vanilla JS</span>
                                 <span class="tag">LLM</span>
                                 <span class="tag">Ansible</span>
                                 <span class="tag">Docker Compose</span>
-                                <span class="tag">CI/CD</span>
+                                <span class="tag">GitHub Actions</span>
                             </div>
                         </div>
                         <div class="project-links">
@@ -196,147 +156,86 @@
                             >
                         </div>
 
-                        <div class="project-tabs">
-                            <input
-                                type="radio"
-                                id="rev-tab-1"
-                                name="tab-rev"
-                                class="tab-input-1"
-                                checked
-                            />
-                            <input
-                                type="radio"
-                                id="rev-tab-2"
-                                name="tab-rev"
-                                class="tab-input-2"
-                            />
-                            <input
-                                type="radio"
-                                id="rev-tab-3"
-                                name="tab-rev"
-                                class="tab-input-3"
-                            />
-                            <input
-                                type="radio"
-                                id="rev-tab-4"
-                                name="tab-rev"
-                                class="tab-input-4"
-                            />
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Сайт, где студенты ищут преподавателей,
+                                расширение для браузера подсвечивает ФИО
+                                преподавателей прямо на учебных порталах, чтобы
+                                оценку было видно сразу. Более 2000 уникальных
+                                отзывов.
+                            </p>
+                        </div>
 
-                            <div class="tab-buttons grid-4-col">
-                                <label for="rev-tab-1" class="tab-btn tab-lbl-1"
-                                    >📖 Обзор</label
+                        <div class="project-tabs">
+                            <div class="tab-buttons">
+                                <span
+                                    class="tab-btn active"
+                                    role="button"
+                                    tabindex="0"
+                                    data-tab="devops"
+                                    >🛠️ DevOps</span
                                 >
-                                <label for="rev-tab-2" class="tab-btn tab-lbl-2"
-                                    >🎨 Frontend</label
+                                <span
+                                    class="tab-btn"
+                                    role="button"
+                                    tabindex="0"
+                                    data-tab="frontend"
+                                    >🎨 Frontend</span
                                 >
-                                <label for="rev-tab-3" class="tab-btn tab-lbl-3"
-                                    >⚡ Backend</label
-                                >
-                                <label for="rev-tab-4" class="tab-btn tab-lbl-4"
-                                    >🛠️ DevOps</label
+                                <span
+                                    class="tab-btn"
+                                    role="button"
+                                    tabindex="0"
+                                    data-tab="backend"
+                                    >⚡ Backend</span
                                 >
                             </div>
 
-                            <div class="tab-content content-1">
+                            <div class="tab-content" data-tab="devops">
                                 <p class="tab-text">
-                                    Платформа отзывов на преподавателей с 2000+
-                                    агрегированными уникальными отзывами,
-                                    которой воспользовались тысячи студентов.
+                                    Деплой на VPS через Ansible: роли для
+                                    bootstrap, Nginx с Certbot и backend в
+                                    Docker Compose. Раздельные inventory для dev
+                                    и prod, секреты вне git. CI/CD в GitHub
+                                    Actions: push в main собирает образ в GHCR и
+                                    деплоит по SSH без простоя остальных
+                                    сервисов. Мониторинг на Prometheus и
+                                    Grafana.
                                 </p>
                             </div>
 
-                            <div class="tab-content content-2">
-                                <ul class="project-bullets">
-                                    <li>
-                                        Разработал SPA-архитектуру на Vanilla JS
-                                        с кастомной хэш-маршрутизацией и
-                                        управлением состоянием без использования
-                                        фреймворков.
-                                    </li>
-                                    <li>
-                                        Внедрил валидацию кэша через
-                                        ETag-заголовки и оффлайн-режим,
-                                        обеспечив отказоустойчивость клиента при
-                                        недоступности бэкенда.
-                                    </li>
-                                    <li>
-                                        Разработал браузерное расширение для
-                                        отображения отзывов и подсветки имен
-                                        преподавателей прямо на учебных
-                                        порталах.
-                                    </li>
-                                    <li>
-                                        Обеспечил адаптивную верстку и настроил
-                                        быструю сборку через esbuild с
-                                        поддержкой watch-режима для ускорения
-                                        разработки.
-                                    </li>
-                                </ul>
+                            <div class="tab-content" data-tab="frontend">
+                                <p class="tab-text">
+                                    SPA на Vanilla JS без фреймворков: своя
+                                    hash-маршрутизация, ETag-кэш и оффлайн-режим
+                                    при недоступном бэкенде. Браузерное
+                                    расширение на Manifest V3 подсвечивает ФИО
+                                    преподавателей на портале вуза. Сборка через
+                                    esbuild с watch-режимом.
+                                </p>
                             </div>
 
-                            <div class="tab-content content-3">
-                                <ul class="project-bullets">
-                                    <li>
-                                        Реализовал RESTful API на FastAPI с
-                                        поддержкой нечеткого поиска
-                                        преподавателей (rapidfuzz) и парсингом
-                                        данных из открытых источников.
-                                    </li>
-                                    <li>
-                                        Интегрировал админ-панель на SQLAdmin
-                                        для управления таблицами БД и ручного
-                                        запуска парсеров и фоновых сервисов.
-                                    </li>
-                                    <li>
-                                        Оптимизировал сетевую нагрузку, настроив
-                                        кэширование запросов со сбросом по ETag.
-                                    </li>
-                                    <li>
-                                        Интегрировал LLM для автоматической
-                                        генерации выжимки из отзывов и расчета
-                                        агрегированной оценки.
-                                    </li>
-                                    <li>
-                                        Спроектировал схему БД в PostgreSQL и
-                                        снизил нагрузку на базу за счет
-                                        In-Memory кэширования часто
-                                        запрашиваемых данных на бэкенде.
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="tab-content content-4">
-                                <ul class="project-bullets">
-                                    <li>
-                                        Полностью автоматизировал развертывание
-                                        проекта на Ansible: написал плейбуки для
-                                        конфигурации нод, управления Docker
-                                        Compose стеками и выпуска SSL (Certbot)
-                                        под Nginx.
-                                    </li>
-                                    <li>
-                                        Внедрил мониторинг приложения на базе
-                                        Prometheus и настроил наглядные дашборды
-                                        в Grafana.
-                                    </li>
-                                    <li>
-                                        Автоматизировал CI/CD пайплайны в GitHub
-                                        Actions для бесшовного деплоя и сборки
-                                        Docker-образов.
-                                    </li>
-                                </ul>
+                            <div class="tab-content" data-tab="backend">
+                                <p class="tab-text">
+                                    REST API на FastAPI и PostgreSQL. Нечёткий
+                                    поиск преподавателей через rapidfuzz,
+                                    парсинг открытых источников, LLM-выжимка
+                                    отзывов, in-memory кэш и ETag. Управление
+                                    таблицами и ручной запуск парсеров через
+                                    SQLAdmin.
+                                </p>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Project: Meow Center -->
                     <article class="project-card" id="proj-meow">
                         <div class="project-header">
-                            <h4>Meow Center</h4>
+                            <h4>
+                                Meow Center
+                                <span class="project-date">[2026]</span>
+                            </h4>
                             <div class="project-tags">
                                 <span class="tag">React</span>
-                                <span class="tag">Django</span>
                                 <span class="tag">Nginx</span>
                                 <span class="tag">Ansible</span>
                                 <span class="tag">Docker</span>
@@ -359,133 +258,110 @@
                             >
                         </div>
 
-                        <div class="project-tabs">
-                            <input
-                                type="radio"
-                                id="meow-tab-1"
-                                name="tab-meow"
-                                class="tab-input-1"
-                                checked
-                            />
-                            <input
-                                type="radio"
-                                id="meow-tab-2"
-                                name="tab-meow"
-                                class="tab-input-2"
-                            />
-                            <input
-                                type="radio"
-                                id="meow-tab-3"
-                                name="tab-meow"
-                                class="tab-input-3"
-                            />
-                            <input
-                                type="radio"
-                                id="meow-tab-4"
-                                name="tab-meow"
-                                class="tab-input-4"
-                            />
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Сайт благотворительного фонда «Мяу-Центр». Здесь
+                                можно посмотреть котов, которые ищут дом, найти
+                                нужного по параметрам и узнать, как помочь
+                                фонду. Сайт работает на собственном сервере,
+                                обновления выкатываются автоматически.
+                            </p>
+                        </div>
 
-                            <div class="tab-buttons grid-4-col">
-                                <label
-                                    for="meow-tab-1"
-                                    class="tab-btn tab-lbl-1"
-                                    >📖 Обзор</label
+                        <div class="project-tabs">
+                            <div class="tab-buttons grid-2-col">
+                                <span
+                                    class="tab-btn active"
+                                    role="button"
+                                    tabindex="0"
+                                    data-tab="devops"
+                                    >🛠️ DevOps</span
                                 >
-                                <label
-                                    for="meow-tab-2"
-                                    class="tab-btn tab-lbl-2"
-                                    >🎨 Frontend</label
-                                >
-                                <label
-                                    for="meow-tab-3"
-                                    class="tab-btn tab-lbl-3"
-                                    >⚡ Backend</label
-                                >
-                                <label
-                                    for="meow-tab-4"
-                                    class="tab-btn tab-lbl-4"
-                                    >🛠️ DevOps</label
+                                <span
+                                    class="tab-btn"
+                                    role="button"
+                                    tabindex="0"
+                                    data-tab="frontend"
+                                    >🎨 Frontend</span
                                 >
                             </div>
 
-                            <div class="tab-content content-1">
+                            <div class="tab-content" data-tab="devops">
                                 <p class="tab-text">
-                                    Веб-сайт для благотворительного фонда помощи
-                                    животным «Мяу-Центр». Полный цикл разработки
-                                    - от клиентской части до подготовки бэкенда
-                                    и настройки CI/CD инфраструктуры.
+                                    Деплой сайта благотворительного фонда через
+                                    Ansible: Docker, Nginx с HTTPS, фронтенд из
+                                    ветки dist, бэкенд через Docker Compose с
+                                    образом из ghcr.io. CI/CD в GitHub Actions:
+                                    сборка фронтенда, сборка образов и деплой на
+                                    сервер.
                                 </p>
                             </div>
 
-                            <div class="tab-content content-2">
-                                <ul class="project-bullets">
-                                    <li>
-                                        Разработал клиентскую часть на React по
-                                        предоставленному дизайн-макету.
-                                    </li>
-                                    <li>
-                                        Оптимизировал рендеринг компонентов и
-                                        загрузку медиаконтента, сократив время
-                                        загрузки страниц.
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="tab-content content-3">
-                                <ul class="project-bullets">
-                                    <li>
-                                        Контролировал доработку Django-сервиса:
-                                        проводил Code Review, формировал
-                                        требования по ТЗ и координировал
-                                        разработку.
-                                    </li>
-                                    <li>
-                                        Контейнеризировал приложение: написал
-                                        production-ready Dockerfile и Docker
-                                        Compose сценарии, настроил инициализацию
-                                        окружения (init-app) и конфигурацию
-                                        переменных.
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="tab-content content-4">
-                                <ul class="project-bullets">
-                                    <li>
-                                        Автоматизировал настройку сервера через
-                                        Ansible: написал плейбуки для подготовки
-                                        окружения и деплоя компонентов.
-                                    </li>
-                                    <li>
-                                        Сконфигурировал Nginx в качестве reverse
-                                        proxy для раздачи статики
-                                        React-приложения, медиафайлов и
-                                        проксирования запросов к бэкенду.
-                                    </li>
-                                    <li>
-                                        Настроил CI/CD в GitHub Actions:
-                                        автоматизировал сборку фронтенда, сборку
-                                        Docker-образов и их деплой на сервер.
-                                    </li>
-                                </ul>
+                            <div class="tab-content" data-tab="frontend">
+                                <p class="tab-text">
+                                    Клиентская часть на React по дизайн-макету:
+                                    главная с двумя каруселями котов, каталог с
+                                    выбором и поиском, статическая страница о
+                                    помощи центру, страница отдельного кота.
+                                </p>
                             </div>
                         </div>
                     </article>
+
+                    <article class="project-card" id="proj-itmo">
+                        <div class="project-header">
+                            <h4>
+                                ITMO.STUDY
+                                <span class="project-date">[2025–2026]</span>
+                            </h4>
+                            <div class="project-tags">
+                                <span class="tag">LaTeX</span>
+                                <span class="tag">ГОСТ 7.32</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/OneTwoZzzPlus/ITMO.STUDY/"
+                                >Репозиторий-хранилище</a
+                            >
+                            •
+                            <a
+                                href="https://github.com/OneTwoZzzPlus/ITMO.STUDY/blob/main/physics.md"
+                                >Physics labs</a
+                            >
+                            •
+                            <a
+                                href="https://www.overleaf.com/read/hxxkqnktktfn#64f27e"
+                                >LaTeX ГОСТ 7.32</a
+                            >
+                        </div>
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Учебный репозиторий: лабораторные работы за
+                                время учёбы в ИТМО, таблица работ по физике и
+                                шаблон отчёта по ГОСТ 7.32 в LaTeX, который
+                                можно открыть на Overleaf.
+                            </p>
+                        </div>
+                        <p class="tab-text" style="margin-top: 0.75rem">
+                            Открытая база лабораторных работ ИТМО и шаблон
+                            отчёта по ГОСТ 7.32 в LaTeX для Overleaf.
+                        </p>
+                    </article>
                 </div>
 
+                <!-- ============ PET-ПРОЕКТЫ ============ -->
                 <div class="project-category" id="proj-pet">
                     <h3>Pet-проекты</h3>
 
-                    <!-- Project: Swiper -->
-                    <article class="project-card">
+                    <article class="project-card" id="proj-swiper">
                         <div class="project-header">
                             <h4>
-                                Swiper <span class="project-date">[2026]</span>
+                                Swiper
+                                <span class="project-date">[2026]</span>
                             </h4>
                             <div class="project-tags">
                                 <span class="tag">React</span>
-                                <span class="tag">Python</span>
                                 <span class="tag">FastAPI</span>
                                 <span class="tag">Redis Streams</span>
                                 <span class="tag">PostgreSQL</span>
@@ -498,210 +374,58 @@
                             >
                         </div>
 
-                        <div class="project-tabs">
-                            <input
-                                type="radio"
-                                id="swip-tab-1"
-                                name="tab-swip"
-                                class="tab-input-1"
-                                checked
-                            />
-                            <input
-                                type="radio"
-                                id="swip-tab-2"
-                                name="tab-swip"
-                                class="tab-input-2"
-                            />
-                            <input
-                                type="radio"
-                                id="swip-tab-3"
-                                name="tab-swip"
-                                class="tab-input-3"
-                            />
-                            <input
-                                type="radio"
-                                id="swip-tab-4"
-                                name="tab-swip"
-                                class="tab-input-4"
-                            />
-
-                            <div class="tab-buttons grid-4-col">
-                                <label
-                                    for="swip-tab-1"
-                                    class="tab-btn tab-lbl-1"
-                                    >📖 Обзор</label
-                                >
-                                <label
-                                    for="swip-tab-2"
-                                    class="tab-btn tab-lbl-2"
-                                    >🎨 Frontend</label
-                                >
-                                <label
-                                    for="swip-tab-3"
-                                    class="tab-btn tab-lbl-3"
-                                    >⚡ Backend</label
-                                >
-                                <label
-                                    for="swip-tab-4"
-                                    class="tab-btn tab-lbl-4"
-                                    >🛠️ DevOps</label
-                                >
-                            </div>
-
-                            <div class="tab-content content-1">
-                                <p class="tab-text">
-                                    Микросервисное приложение с разделением по
-                                    доменам (авторизация, профили, свайпы,
-                                    колоды, почтовые уведомления).
-                                    Взаимодействие между сервисами построено на
-                                    асинхронных очередях Redis Streams и REST
-                                    API.
-                                </p>
-                            </div>
-
-                            <div class="tab-content content-2">
-                                <ul class="project-bullets">
-                                    <li>
-                                        Разработал клиентскую часть на React с
-                                        интеграцией контекста авторизации (Auth
-                                        Context).
-                                    </li>
-                                    <li>
-                                        Реализовал механизм бесшовного
-                                        автоматического обновления токенов (Auto
-                                        Refresh JWT).
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="tab-content content-3">
-                                <ul class="project-bullets">
-                                    <li>
-                                        Разработал микросервисы авторизации на
-                                        JWT-токенах, профилей, свайпов и
-                                        отправки писем на FastAPI.
-                                    </li>
-                                    <li>
-                                        Спроектировал независимые реляционные БД
-                                        в PostgreSQL под каждый микросервис.
-                                    </li>
-                                    <li>
-                                        Реализовал кеширование межсервисных
-                                        запросов и пользовательских колод в
-                                        Redis.
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="tab-content content-4">
-                                <ul class="project-bullets">
-                                    <li>
-                                        Организовал шину сообщений через Redis
-                                        Streams с группами обработчиков
-                                        (consumer groups).
-                                    </li>
-                                    <li>
-                                        Полностью контейнеризировал систему и
-                                        настроил изолированный запуск сервисов в
-                                        Docker Compose.
-                                    </li>
-                                    <li>
-                                        Настроил конфигурацию через переменные
-                                        окружения и healthcheck-проверки
-                                        контейнеров.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project: LibreSpeed -->
-                    <article class="project-card">
-                        <div class="project-header">
-                            <h4>
-                                LibreSpeed via Docker Compose
-                                <span class="project-date">[2026]</span>
-                            </h4>
-                            <div class="project-tags">
-                                <span class="tag">Nginx</span>
-                                <span class="tag">BashOps</span>
-                                <span class="tag">PostgreSQL</span>
-                                <span class="tag">S3 Storage</span>
-                                <span class="tag">Docker Compose</span>
-                            </div>
-                        </div>
-                        <div class="project-links">
-                            <a
-                                href="https://github.com/OneTwoZzzPlus/librespeed"
-                                >Репозиторий проекта</a
-                            >
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Приложение в духе «Tinder для программистов»:
+                                можно свайпать людей, проекты и специализации и
+                                смотреть подходящие варианты. Устроено как набор
+                                отдельных сервисов, которые обмениваются
+                                событиями через очереди.
+                            </p>
                         </div>
 
                         <div class="project-tabs">
-                            <input
-                                type="radio"
-                                id="ls-tab-1"
-                                name="tab-ls"
-                                class="tab-input-1"
-                                checked
-                            />
-                            <input
-                                type="radio"
-                                id="ls-tab-2"
-                                name="tab-ls"
-                                class="tab-input-2"
-                            />
-
                             <div class="tab-buttons grid-2-col">
-                                <label for="ls-tab-1" class="tab-btn tab-lbl-1"
-                                    >📖 Обзор</label
+                                <span
+                                    class="tab-btn active"
+                                    role="button"
+                                    tabindex="0"
+                                    data-tab="backend"
+                                    >⚡ Backend</span
                                 >
-                                <label for="ls-tab-2" class="tab-btn tab-lbl-2"
-                                    >🛠️ DevOps</label
+                                <span
+                                    class="tab-btn"
+                                    role="button"
+                                    tabindex="0"
+                                    data-tab="frontend"
+                                    >🎨 Frontend</span
                                 >
                             </div>
 
-                            <div class="tab-content content-1">
+                            <div class="tab-content" data-tab="backend">
                                 <p class="tab-text">
-                                    Инфраструктурный проект по переносу сервиса
-                                    измерения скорости LibreSpeed с классических
-                                    systemd-юнитов на отказоустойчивую
-                                    контейнерную архитектуру с балансировкой и
-                                    автобэкапами.
+                                    Микросервисное приложение «Tinder для
+                                    программистов»: свайпы людей, проектов и
+                                    специализаций, персональные колоды, почтовые
+                                    уведомления. Пять сервисов (auth, profile,
+                                    swipe, deck, notification), отдельная БД у
+                                    каждого, события через Redis Streams. Колоды
+                                    собираются в фоне и кэшируются. API gateway
+                                    не реализован.
                                 </p>
                             </div>
 
-                            <div class="tab-content content-2">
-                                <ul class="project-bullets">
-                                    <li>
-                                        Перевёл систему с systemd на Docker
-                                        Compose с настройкой зависимостей
-                                        (`depends_on`) и `healthcheck`.
-                                    </li>
-                                    <li>
-                                        Настроил Nginx как отказоустойчивый
-                                        балансировщик нагрузки на 3
-                                        бэкенд-инстанса с SSL/HSTS и защитными
-                                        заголовками.
-                                    </li>
-                                    <li>
-                                        Написал Bash-скрипты для автоматических
-                                        дампов PostgreSQL, ротации логов Nginx и
-                                        регулярной выгрузки архивов в S3 по
-                                        расписанию (cron).
-                                    </li>
-                                    <li>
-                                        Адаптировал компоненты LibreSpeed для
-                                        контейнерной среды и настроил хранение
-                                        статистики тестов скорости в PostgreSQL.
-                                    </li>
-                                </ul>
+                            <div class="tab-content" data-tab="frontend">
+                                <p class="tab-text">
+                                    React-клиент: контекст авторизации и
+                                    автоматическое обновление JWT-токенов.
+                                    Работает с сервисами через REST API.
+                                </p>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Project: Go SSO Service -->
-                    <article class="project-card">
+                    <article class="project-card" id="proj-sso">
                         <div class="project-header">
                             <h4>
                                 Go SSO Service
@@ -722,88 +446,428 @@
                             >
                         </div>
 
-                        <div class="project-tabs">
-                            <input
-                                type="radio"
-                                id="sso-tab-1"
-                                name="tab-sso"
-                                class="tab-input-1"
-                                checked
-                            />
-                            <input
-                                type="radio"
-                                id="sso-tab-2"
-                                name="tab-sso"
-                                class="tab-input-2"
-                            />
-                            <input
-                                type="radio"
-                                id="sso-tab-3"
-                                name="tab-sso"
-                                class="tab-input-3"
-                            />
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Сервис входа и регистрации, который можно
+                                подключить к нескольким приложениям. Внутри gRPC
+                                на Go, сверху веб-интерфейс на Next.js.
+                            </p>
+                        </div>
 
-                            <div class="tab-buttons">
-                                <label for="sso-tab-1" class="tab-btn tab-lbl-1"
-                                    >📖 Обзор</label
+                        <div class="project-tabs">
+                            <div class="tab-buttons grid-2-col">
+                                <span
+                                    class="tab-btn active"
+                                    role="button"
+                                    tabindex="0"
+                                    data-tab="backend"
+                                    >⚡ Backend</span
                                 >
-                                <label for="sso-tab-3" class="tab-btn tab-lbl-3"
-                                    >🎨 Frontend</label
-                                >
-                                <label for="sso-tab-2" class="tab-btn tab-lbl-2"
-                                    >⚡ Backend</label
+                                <span
+                                    class="tab-btn"
+                                    role="button"
+                                    tabindex="0"
+                                    data-tab="frontend"
+                                    >🎨 Frontend</span
                                 >
                             </div>
 
-                            <div class="tab-content content-1">
+                            <div class="tab-content" data-tab="backend">
                                 <p class="tab-text">
-                                    Учебный микросервис сквозной аутентификации
-                                    и авторизации (SSO) на Go. Связывает
-                                    компоненты через высокопроизводительное
-                                    gRPC-взаимодействие, предоставляет REST
-                                    Gateway для внешних клиентов и имеет личный
-                                    кабинет на Next.js.
+                                    Сервис авторизации: gRPC-сервер на Go, REST
+                                    gateway и SMTP-модуль. Контракты на Protobuf
+                                    с автогенерацией кода, пользователи в
+                                    PostgreSQL. Не реализованы: регистрация на
+                                    фронтенде и подтверждение email.
                                 </p>
                             </div>
 
-                            <div class="tab-content content-2">
-                                <ul class="project-bullets">
-                                    <li>
-                                        Разработал gRPC-сервер на Go для
-                                        авторизации, REST Gateway для
-                                        HTTP-запросов и SMTP-модуль отправки
-                                        писем.
-                                    </li>
-                                    <li>
-                                        Спроектировал строгие контракты
-                                        взаимодействия на Protocol Buffers и
-                                        структуру реляционной БД пользователей в
-                                        PostgreSQL.
-                                    </li>
-                                    <li>
-                                        Настроил автоматическую генерацию кода
-                                        из Protobuf-файлов для Go.
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="tab-content content-3">
-                                <ul class="project-bullets">
-                                    <li>
-                                        Написал фронтенд на TypeScript и Next.js
-                                        с динамическими формами авторизации.
-                                    </li>
-                                    <li>
-                                        Реализовал взаимодействие клиентской
-                                        части с бэкендом через gRPC-web / REST
-                                        Gateway.
-                                    </li>
-                                </ul>
+                            <div class="tab-content" data-tab="frontend">
+                                <p class="tab-text">
+                                    Фронтенд на Next.js и TypeScript: формы
+                                    авторизации, взаимодействие с бэкендом через
+                                    gRPC-web и REST gateway.
+                                </p>
                             </div>
                         </div>
                     </article>
+
+                    <article class="project-card" id="proj-observability">
+                        <div class="project-header">
+                            <h4>
+                                Observability-стенд
+                                <span class="project-date">[2026]</span>
+                            </h4>
+                            <div class="project-tags">
+                                <span class="tag">Prometheus</span>
+                                <span class="tag">Grafana</span>
+                                <span class="tag">Loki</span>
+                                <span class="tag">Fluent Bit</span>
+                                <span class="tag">Jaeger</span>
+                                <span class="tag">OpenTelemetry</span>
+                                <span class="tag">Alertmanager</span>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Набор инструментов, который показывает, что
+                                происходит с сервисом: метрики, логи и трейсы в
+                                одном месте, плюс оповещения, если что-то
+                                сломалось.
+                            </p>
+                        </div>
+                        <p class="tab-text" style="margin-top: 0.75rem">
+                            Стенд наблюдаемости для одного сервиса: метрики
+                            (Prometheus, Grafana), логи (Loki, Fluent Bit),
+                            трейсы (Jaeger, OTel Collector), алерты
+                            (Alertmanager, webhook). Источники, дашборды и
+                            правила описаны в конфигах через provisioning.
+                            RED-дашборд; переход от ошибки в Grafana к трейсу по
+                            trace_id.
+                        </p>
+                    </article>
+
+                    <article class="project-card" id="proj-docker">
+                        <div class="project-header">
+                            <h4>
+                                Docker-практикум
+                                <span class="project-date">[2025–2026]</span>
+                            </h4>
+                            <div class="project-tags">
+                                <span class="tag">Docker</span>
+                                <span class="tag">Docker Compose</span>
+                                <span class="tag">FastAPI</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">Redis</span>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Учебная серия: приложение на FastAPI с
+                                PostgreSQL и Redis, которое собрано в контейнеры
+                                и поднимается через Docker Compose.
+                            </p>
+                        </div>
+                        <p class="tab-text" style="margin-top: 0.75rem">
+                            Серия из трёх лаб: контейнеризация приложения на
+                            FastAPI с PostgreSQL и Redis. Multi-stage Dockerfile
+                            (образ меньше на 17 МБ), healthcheck без curl,
+                            именованные volumes, bind mount конфига,
+                            пользовательские сети, Compose с depends_on по
+                            healthcheck. Redis-кэш общий для трёх реплик
+                            сервиса.
+                        </p>
+                    </article>
+
+                    <article class="project-card" id="proj-kafka">
+                        <div class="project-header">
+                            <h4>
+                                Kafka: заказы и сборщики
+                                <span class="project-date">[2026]</span>
+                            </h4>
+                            <div class="project-tags">
+                                <span class="tag">Kafka</span>
+                                <span class="tag">KRaft</span>
+                                <span class="tag">Prometheus</span>
+                                <span class="tag">Grafana</span>
+                                <span class="tag">Kafka UI</span>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Два сервиса обмениваются заказами через Kafka:
+                                один выкладывает заказы, другой их обрабатывает.
+                                Топики описаны в файле, а не создаются руками.
+                            </p>
+                        </div>
+                        <p class="tab-text" style="margin-top: 0.75rem">
+                            Два сервиса, связанные Kafka в режиме KRaft. Топики
+                            описаны декларативно и применяются сервисом
+                            kafka-admin через AdminClient API. Сценарии: сброс
+                            offset для пересчёта истории, retention по
+                            сегментам. Мониторинг через Kafka Exporter,
+                            Prometheus и Grafana; алерты KafkaDown,
+                            NoPickersInGroup и PickersLagHigh.
+                        </p>
+                    </article>
+
+                    <article class="project-card" id="proj-librespeed">
+                        <div class="project-header">
+                            <h4>
+                                LibreSpeed в Docker Compose
+                                <span class="project-date">[2026]</span>
+                            </h4>
+                            <div class="project-tags">
+                                <span class="tag">Nginx</span>
+                                <span class="tag">Docker Compose</span>
+                                <span class="tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/OneTwoZzzPlus/librespeed"
+                                >Репозиторий проекта</a
+                            >
+                        </div>
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Свой сервер для измерения скорости интернета на
+                                базе LibreSpeed. Результаты измерений
+                                сохраняются в базу.
+                            </p>
+                        </div>
+                        <p class="tab-text" style="margin-top: 0.75rem">
+                            Перенос сервиса измерения скорости с systemd-юнитов
+                            на Docker Compose. depends_on и healthcheck,
+                            Nginx-балансировка на три backend-инстанса,
+                            security-заголовки, таймауты. Телеметрия измерений
+                            пишется в PostgreSQL.
+                        </p>
+                    </article>
+
+                    <article class="project-card" id="proj-linux-admin">
+                        <div class="project-header">
+                            <h4>
+                                Linux-администрирование
+                                <span class="project-date">[2025–2026]</span>
+                            </h4>
+                            <div class="project-tags">
+                                <span class="tag">Linux</span>
+                                <span class="tag">OpenSSL</span>
+                                <span class="tag">Nginx</span>
+                                <span class="tag">Bash</span>
+                                <span class="tag">S3</span>
+                                <span class="tag">logrotate</span>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Серия лабораторных по администрированию сервера:
+                                собственный центр сертификатов, HTTPS-сайт на
+                                домене, балансировщик на Nginx и выгрузка логов
+                                в S3.
+                            </p>
+                        </div>
+                        <p class="tab-text" style="margin-top: 0.75rem">
+                            Серия из трёх лаб. Собственный Root CA, CSR и
+                            подпись сертификата одногруппника, HTTPS на 443 с
+                            DDNS-доменом. Nginx как балансировщик на три
+                            backend-инстанса через systemd-шаблон,
+                            security-заголовки, таймауты против slowloris.
+                            Выгрузка архивов логов в S3 через bash-скрипт с
+                            проверкой sha256, ротация через logrotate.
+                        </p>
+                    </article>
+
+                    <article class="project-card" id="proj-linux-storage">
+                        <div class="project-header">
+                            <h4>
+                                Linux-практикум: подсистема хранения
+                                <span class="project-date">[2024]</span>
+                            </h4>
+                            <div class="project-tags">
+                                <span class="tag">Linux</span>
+                                <span class="tag">LVM</span>
+                                <span class="tag">NFS</span>
+                                <span class="tag">mdstat</span>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Практикум по дискам: разделы, LVM, общий сетевой
+                                ресурс через NFS и зеркалирование дисков.
+                            </p>
+                        </div>
+                        <p class="tab-text" style="margin-top: 0.75rem">
+                            Разделы и resize ext4, LVM, экспорт NFS с
+                            ограничением доступа по сети, настройка fstab,
+                            зеркалирование дисков (mdstat).
+                        </p>
+                    </article>
+
+                    <article class="project-card" id="proj-linux-security">
+                        <div class="project-header">
+                            <h4>
+                                Linux-практикум: элементы безопасности
+                                <span class="project-date">[2024]</span>
+                            </h4>
+                            <div class="project-tags">
+                                <span class="tag">Linux</span>
+                                <span class="tag">iptables</span>
+                                <span class="tag">SSH</span>
+                                <span class="tag">ACL</span>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Практикум по сети и безопасности: настройка
+                                интерфейсов, NAT через iptables, вход по
+                                SSH-ключам и права доступа через ACL.
+                            </p>
+                        </div>
+                        <p class="tab-text" style="margin-top: 0.75rem">
+                            Настройка сетевых интерфейсов, правила iptables с
+                            NAT и DNAT, SSH-ключи с passphrase, правки
+                            sshd_config, права доступа через ACL (setfacl).
+                        </p>
+                    </article>
+
+                    <article class="project-card" id="proj-mpls">
+                        <div class="project-header">
+                            <h4>
+                                MPLS-магистраль
+                                <span class="project-date">[2026]</span>
+                            </h4>
+                            <div class="project-tags">
+                                <span class="tag">MikroTik RouterOS</span>
+                                <span class="tag">OSPF</span>
+                                <span class="tag">MPLS LDP</span>
+                                <span class="tag">iBGP</span>
+                                <span class="tag">L3VPN</span>
+                                <span class="tag">VPLS</span>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Учебная магистральная сеть из шести
+                                маршрутизаторов: несколько клиентов живут в
+                                изолированных сетях поверх общего бэкбона.
+                                Сначала собрана в эмуляторе, потом на настоящем
+                                оборудовании.
+                            </p>
+                        </div>
+                        <p class="tab-text" style="margin-top: 0.75rem">
+                            Ядро IP/MPLS из шести маршрутизаторов MikroTik
+                            RouterOS: OSPF, MPLS LDP, iBGP с двумя route
+                            reflector и VPNv4. L3VPN на VRF для трёх
+                            изолированных клиентов, VPLS с BGP-сигнализацией.
+                            Сначала в Containerlab, затем на реальном
+                            оборудовании (выполнено в команде). Документация
+                            RouterOS 7 адаптирована под версию 6.47.9.
+                            Траблшутинг: Wi-Fi-подключение и firewall ломали
+                            MPLS и ping.
+                        </p>
+                    </article>
+
+                    <article class="project-card" id="proj-containerlab">
+                        <div class="project-header">
+                            <h4>
+                                Containerlab: VLAN и статическая маршрутизация
+                                <span class="project-date">[2026]</span>
+                            </h4>
+                            <div class="project-tags">
+                                <span class="tag">Containerlab</span>
+                                <span class="tag">VLAN</span>
+                                <span class="tag">DHCP</span>
+                                <span class="tag">Static routing</span>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Виртуальная сеть из роутера, коммутаторов и
+                                компьютеров: разделение на VLAN, выдача адресов
+                                по DHCP и маршрутизация между тремя офисами.
+                            </p>
+                        </div>
+                        <p class="tab-text" style="margin-top: 0.75rem">
+                            Роутер, три коммутатора и два PC. VLAN 10 и 20 через
+                            trunk и access, DHCP на каждом VLAN. Затем три офиса
+                            треугольником со статической маршрутизацией.
+                        </p>
+                    </article>
+
+                    <article class="project-card" id="proj-cisco">
+                        <div class="project-header">
+                            <h4>
+                                Сети: Cisco Packet Tracer и Wireshark
+                                <span class="project-date">[2025]</span>
+                            </h4>
+                            <div class="project-tags">
+                                <span class="tag">Cisco Packet Tracer</span>
+                                <span class="tag">Wireshark</span>
+                                <span class="tag">STP / RSTP</span>
+                                <span class="tag">EtherChannel</span>
+                                <span class="tag">LACP</span>
+                                <span class="tag">NAT</span>
+                                <span class="tag">ACL</span>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Лабораторные по Cisco Packet Tracer и Wireshark:
+                                офисная сеть с резервными линками, выход в
+                                интернет через NAT и разбор трафика по пакетам.
+                            </p>
+                        </div>
+                        <p class="tab-text" style="margin-top: 0.75rem">
+                            Лабы курса в Cisco Packet Tracer и Wireshark. VLSM
+                            для трёх сетей, статическая маршрутизация с
+                            провайдером. VLAN, межвлановая маршрутизация на
+                            L3-коммутаторе, DHCP relay. STP с замером сходимости
+                            около 30 с и RSTP. Статический EtherChannel и LACP.
+                            PAT по ACL и статический NAT на веб-сервер. Анализ
+                            ICMP, ARP и TCP-рукопожатия в Wireshark.
+                        </p>
+                    </article>
+
+                    <article class="project-card" id="proj-web-labs">
+                        <div class="project-header">
+                            <h4>
+                                Web-лабы: Магазинчик и Список задач
+                                <span class="project-date">[2025]</span>
+                            </h4>
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Два учебных приложения на чистом JavaScript без
+                                фреймворков: интернет-магазинчик с корзиной и
+                                список задач с перетаскиванием.
+                            </p>
+                        </div>
+                        <p class="tab-text" style="margin-top: 0.75rem">
+                            Две учебные SPA на Vanilla JS без фреймворков.
+                            «Магазинчик»: каталог и корзина с pub-sub и
+                            localStorage. «Список задач»: сортировка
+                            drag-and-drop на desktop и touch.
+                        </p>
+                    </article>
+
+                    <article class="project-card" id="proj-ml">
+                        <div class="project-header">
+                            <h4>
+                                ML: классика и transfer learning
+                                <span class="project-date">[2026]</span>
+                            </h4>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">scikit-learn</span>
+                                <span class="tag">PyTorch</span>
+                                <span class="tag">ResNet18</span>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Лаба по распознаванию пород кошек и собак:
+                                сравнение обучения с замороженной нейросетью и
+                                дообучения её последнего блока.
+                            </p>
+                        </div>
+                        <p class="tab-text" style="margin-top: 0.75rem">
+                            Лаба по классическому ML и transfer learning.
+                            ResNet18 на Oxford-IIIT Pet (37 пород): feature
+                            extraction даёт accuracy 72.25%, fine-tuning
+                            последнего блока — 78.60% на 3669 тестовых
+                            изображениях.
+                        </p>
+                    </article>
                 </div>
 
+                <!-- ============ ЗАВЕРШЕННЫЕ ПРОЕКТЫ ============ -->
                 <div class="project-category" id="proj-completed">
                     <h3>Завершенные проекты</h3>
 
@@ -829,10 +893,17 @@
                                 >Репозиторий игры</a
                             >
                         </div>
-                        <p class="tab-text">
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Историческая визуальная новелла: сюжет идёт по
+                                диалогам, которые написаны на языке Ink. Игра
+                                открывается прямо в браузере.
+                            </p>
+                        </div>
+                        <p class="tab-text" style="margin-top: 0.75rem">
                             Историческая новелла на движке Unity и языке
-                            диалогов Ink. Настроен CI/CD пайплайн для
-                            автоматической сборки WebGL-версии в браузере.
+                            диалогов Ink. CI/CD для автоматической сборки
+                            WebGL-версии в браузере.
                         </p>
                     </article>
 
@@ -862,7 +933,15 @@
                                 >Репозиторий приложения</a
                             >
                         </div>
-                        <p class="tab-text">
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Мобильный помощник, который учит правилам
+                                безопасного поведения на объектах РЖД:
+                                интерактивные сценарии вместо скучной
+                                инструкции.
+                            </p>
+                        </div>
+                        <p class="tab-text" style="margin-top: 0.75rem">
                             Интерактивный мобильный помощник, обучающий правилам
                             безопасного поведения на объектах РЖД (Unity, C#).
                             <em
@@ -901,11 +980,18 @@
                                 >Приложение Android</a
                             >
                         </div>
-                        <p class="tab-text">
-                            Печатная плата и прошивка на C++ для
-                            микроконтроллера ATmega328P/ESP8266 + нативное
-                            Android-приложение (Kotlin) для дистанционного
-                            мониторинга датчиков и управления периферией.
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Самодельная система для курятника: платы с
+                                датчиками, которые передают данные, и телефон, с
+                                которого можно за ними следить и управлять.
+                            </p>
+                        </div>
+                        <p class="tab-text" style="margin-top: 0.75rem">
+                            Плата и прошивка на C++ для микроконтроллера
+                            ATmega328P/ESP8266 и нативное Android-приложение на
+                            Kotlin для мониторинга датчиков и управления
+                            периферией.
                         </p>
                     </article>
                 </div>
