@@ -285,6 +285,10 @@ a:hover {
     color: var(--text-secondary);
 }
 
+ul.tab-text {
+    padding-left: 1rem;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
