@@ -285,6 +285,14 @@ a:hover {
     color: var(--text-secondary);
 }
 
+p.tab-text {
+    margin-top: 0.75rem;
+}
+
+p.tab-text:first-child {
+    margin-top: 0;
+}
+
 ul.tab-text {
     padding-left: 1rem;
 }

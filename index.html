@@ -460,7 +460,7 @@
                             </div>
                         </div>
                         <p class="tab-text">
-                            Приложения на чистом JavaScript без фреймворков
+                            Приложения на чистом JavaScript без фреймворков,
                             развёрнутые на GitHub Pages.
                         </p>
                         <div class="tab-content" style="margin-top: 0.75rem">
@@ -502,6 +502,26 @@
                                 удаление, поиск, фильтрация и сортировка.
                                 Порядок задач меняется перетаскиванием: мышью на
                                 desktop и касанием на мобильных.
+                            </p>
+                            <div
+                                class="project-links"
+                                style="margin-top: 0.75rem"
+                            >
+                                <a
+                                    href="https://onetwozzzplus.github.io/web-lab-3"
+                                    >«2048»</a
+                                >
+                                •
+                                <a
+                                    href="https://github.com/OneTwoZzzPlus/web-lab-3"
+                                    >Репозиторий</a
+                                >
+                            </div>
+                            <p class="tab-text">
+                                «2048» — игра с плавной анимацией плиток,
+                                управлением стрелками и свайпами, отменой хода и
+                                таблицей лучших результатов. Состояние партии
+                                сохраняется между визитами.
                             </p>
                         </div>
                     </article>
@@ -642,15 +662,14 @@
                                 <span class="project-date">[2026]</span>
                             </h4>
                             <div class="project-tags">
-                                <span class="tag">MikroTik RouterOS</span>
+                                <span class="tag">RouterOS</span>
                                 <span class="tag">Containerlab</span>
                                 <span class="tag">VLAN</span>
-                                <span class="tag">DHCP</span>
                                 <span class="tag">OSPF</span>
-                                <span class="tag">MPLS LDP</span>
                                 <span class="tag">iBGP</span>
-                                <span class="tag">L3VPN</span>
-                                <span class="tag">VPLS</span>
+                                <span class="tag">MPLS</span>
+                                <span class="tag">L2VPN (VPLS) </span>
+                                <span class="tag">L3VPN (VRF) </span>
                             </div>
                         </div>
                         <div class="project-links">
@@ -661,33 +680,15 @@
                         </div>
                         <div class="tab-content">
                             <p class="tab-text">
-                                Развернул Containerlab и собрал образ RouterOS
-                                из vrnetlab. Построил сеть из роутера, трёх
-                                коммутаторов и двух PC. Разделил трафик на VLAN
-                                10 и 20 через trunk и access, на каждом VLAN
-                                поднял DHCP.
+                                Серия работ по построению операторской сети в
+                                Containerlab на образах RouterOS: VLAN и
+                                статическая маршрутизация, затем OSPF и MPLS в
+                                магистрали, iBGP с route reflector, L3VPN на VRF
+                                и VPLS для связи клиентских офисов.
                             </p>
-                            <p class="tab-text" style="margin-top: 0.75rem">
-                                Соединил три офиса треугольником. Настроил
-                                адресацию между роутерами, статическую
-                                маршрутизацию и DHCP в каждом офисе.
-                            </p>
-                            <p class="tab-text" style="margin-top: 0.75rem">
-                                Добавил OSPF и MPLS LDP в магистраль и поднял
-                                VPLS между граничными роутерами. Проверял
-                                соседства и передачу кадров между клиентами.
-                            </p>
-                            <p class="tab-text" style="margin-top: 0.75rem">
-                                Поверх MPLS построил iBGP с двумя route
-                                reflector и VPNv4. Развернул L3VPN на VRF для
-                                трёх изолированных клиентов и VPLS с
-                                BGP-сигнализацией.
-                            </p>
-                            <p class="tab-text" style="margin-top: 0.75rem">
-                                Повторил схему на реальном оборудовании (в
-                                команде). Столкнулся с Wi-Fi-подключением,
-                                которое ломало MPLS, и firewall, блокировавшим
-                                ping.
+                            <p class="tab-text">
+                                Финальную схему повторил на реальных роутерах
+                                MikroTik в команде из шести человек.
                             </p>
                         </div>
                     </article>
@@ -712,65 +713,33 @@
                                 >Репозиторий проекта</a
                             >
                         </div>
-                        <p class="tab-text">
-                            Cервис сквозной аутентификации и авторизации (SSO)
-                            на Go и Next.js.
-                        </p>
-                        <div class="project-tabs">
-                            <div class="tab-buttons grid-2-col">
-                                <span
-                                    class="tab-btn active"
-                                    role="button"
-                                    tabindex="0"
-                                    data-tab="backend"
-                                    >⚡ Backend</span
-                                >
-                                <span
-                                    class="tab-btn"
-                                    role="button"
-                                    tabindex="0"
-                                    data-tab="frontend"
-                                    >🎨 Frontend</span
-                                >
-                            </div>
-
-                            <div class="tab-content" data-tab="backend">
-                                <p class="tab-text">
-                                    Сервис авторизации: gRPC-сервер на Go, REST
-                                    gateway и SMTP-модуль. Контракты на Protobuf
-                                    с автогенерацией кода, пользователи в
-                                    PostgreSQL.
-                                </p>
-                            </div>
-
-                            <div class="tab-content" data-tab="frontend">
-                                <p class="tab-text">
-                                    Фронтенд на Next.js и TypeScript: формы
-                                    авторизации, взаимодействие с бэкендом через
-                                    gRPC-web и REST gateway.
-                                </p>
-                            </div>
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Сервис сквозной аутентификации и авторизации
+                                (SSO): gRPC-сервер на Go, REST gateway и
+                                SMTP-модуль. Контракты на Protobuf с
+                                автогенерацией кода, пользователи в PostgreSQL.
+                            </p>
+                            <p class="tab-text">
+                                Фронтенд на Next.js и TypeScript: формы
+                                авторизации, взаимодействие с бэкендом через
+                                gRPC-web и REST gateway.
+                            </p>
                         </div>
                     </article>
 
                     <article class="project-card" id="proj-cisco">
                         <div class="project-header">
                             <h4>
-                                Компьютерные сети в Cisco Packet Tracer и
-                                Wireshark
+                                Компьютерные сети в Cisco Packet Tracer
                                 <span class="project-date">[2025]</span>
                             </h4>
                             <div class="project-tags">
                                 <span class="tag">Cisco Packet Tracer</span>
                                 <span class="tag">Wireshark</span>
-                                <span class="tag">VLSM</span>
                                 <span class="tag">VLAN</span>
-                                <span class="tag">DHCP relay</span>
                                 <span class="tag">STP / RSTP</span>
-                                <span class="tag">EtherChannel</span>
-                                <span class="tag">LACP</span>
                                 <span class="tag">NAT</span>
-                                <span class="tag">ACL</span>
                             </div>
                         </div>
                         <div class="project-links">
@@ -781,37 +750,12 @@
                         </div>
                         <div class="tab-content">
                             <p class="tab-text">
-                                Разбил три сети на подсети по VLSM и настроил
-                                статическую маршрутизацию между маршрутизаторами
-                                и провайдером. Проверял доступность через ping и
-                                traceroute.
-                            </p>
-                            <p class="tab-text" style="margin-top: 0.75rem">
-                                Разобрался в разнице концентратора и
-                                коммутатора. Разделил сеть на VLAN в режимах
-                                access и trunk, добавил voice VLAN. Настроил
-                                межвлановую маршрутизацию на L3-коммутаторе и
-                                DHCP relay через ip helper-address.
-                            </p>
-                            <p class="tab-text" style="margin-top: 0.75rem">
-                                Собрал кольцо из коммутаторов и замерил
-                                сходимость: STP восстанавливает связь примерно
-                                за 30 секунд, RSTP — сразу после отключения
-                                порта. Поднял статический EtherChannel на
-                                четырёх линках и LACP в режимах active и
-                                passive. При отключении одного линка связь
-                                сохранилась, но на статическом агрегате была
-                                заметная задержка.
-                            </p>
-                            <p class="tab-text" style="margin-top: 0.75rem">
-                                Настроил PAT по стандартному ACL для выхода в
-                                интернет и статический NAT для веб-сервера
-                                внутри сети.
-                            </p>
-                            <p class="tab-text" style="margin-top: 0.75rem">
-                                Разобрал трафик в Wireshark: ICMP-запросы,
-                                ARP-рассылки и TCP-рукопожатие (SYN, SYN-ACK,
-                                ACK) при подключении к FTP.
+                                Серия работ по построению корпоративных сетей:
+                                адресация и статическая маршрутизация, VLAN с
+                                межвлановой маршрутизацией и DHCP,
+                                отказоустойчивость на STP/RSTP и EtherChannel,
+                                выход в интернет через NAT. Анализировал трафик
+                                в Wireshark.
                             </p>
                         </div>
                     </article>
@@ -824,12 +768,10 @@
                             </h4>
                             <div class="project-tags">
                                 <span class="tag">Linux</span>
+                                <span class="tag">Bash</span>
                                 <span class="tag">LVM</span>
-                                <span class="tag">NFS</span>
-                                <span class="tag">mdstat</span>
                                 <span class="tag">iptables</span>
                                 <span class="tag">SSH</span>
-                                <span class="tag">ACL</span>
                             </div>
                         </div>
                         <div class="project-links">
@@ -840,14 +782,10 @@
                         </div>
                         <div class="tab-content">
                             <p class="tab-text">
-                                Настройка дисков и сетевого доступа на
-                                Linux-сервере: разделы и resize ext4, LVM,
-                                зеркалирование дисков (mdstat), общий доступ
-                                через NFS с ограничением по сети и настройка
-                                fstab. Безопасность: сетевые интерфейсы, правила
-                                iptables с NAT и DNAT, вход по SSH-ключам с
-                                passphrase, правки sshd_config и права доступа
-                                через ACL.
+                                Серия работ по Linux: скрипты на Bash, работа с
+                                дисками и LVM, NFS-доступ, а также базовая
+                                безопасность: правила iptables с NAT и вход по
+                                SSH-ключам.
                             </p>
                         </div>
                     </article>
