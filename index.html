@@ -347,6 +347,73 @@
                 <div class="project-category" id="proj-pet">
                     <h3>Pet-проекты</h3>
 
+                    <article class="project-card" id="proj-elk">
+                        <div class="project-header">
+                            <h4>
+                                Анализ логов в ELK
+                                <span class="project-date">[2026]</span>
+                            </h4>
+                            <div class="project-tags">
+                                <span class="tag">Elasticsearch</span>
+                                <span class="tag">Kibana</span>
+                                <span class="tag">ILM</span>
+                                <span class="tag">Prometheus</span>
+                                <span class="tag">Grafana</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/OneTwoZzzPlus/ict-administration/tree/main/lab4"
+                                >Репозиторий проекта</a
+                            >
+                        </div>
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Elasticsearch и Kibana в Docker Compose с TLS.
+                                Загрузил через Bulk API более 200 тысяч логов
+                                реального бэкенда, построил запросы, агрегации и
+                                дашборд в Kibana. Настроил ILM с rollover и
+                                автоудалением индексов. Состояние кластера
+                                отслеживается снаружи через Prometheus и
+                                Grafana, с алертами на yellow и падение узла.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" id="proj-pg-replication">
+                        <div class="project-header">
+                            <h4>
+                                Репликация PostgreSQL и failover
+                                <span class="project-date">[2026]</span>
+                            </h4>
+                            <div class="project-tags">
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">WAL-репликация</span>
+                                <span class="tag">Docker Compose</span>
+                                <span class="tag">Prometheus</span>
+                                <span class="tag">Grafana</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/OneTwoZzzPlus/ict-administration/tree/main/lab3"
+                                >Репозиторий проекта</a
+                            >
+                        </div>
+                        <div class="tab-content">
+                            <p class="tab-text">
+                                Primary и hot standby на PostgreSQL с физической
+                                репликацией через WAL. Отставание реплики
+                                измеряю по позициям журнала, сравнил асинхронный
+                                и синхронный режимы на примере CAP. Вручную
+                                провёл failover через pg_promote и воспроизвёл
+                                split brain при возврате старого primary. Алерты
+                                на отсутствие primary, реплики и рост lag в
+                                Prometheus и Grafana.
+                            </p>
+                        </div>
+                    </article>
+
                     <article class="project-card" id="proj-kafka">
                         <div class="project-header">
                             <h4>
